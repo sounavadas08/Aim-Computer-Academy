@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Download, FileText, CheckCircle2, Phone } from 'lucide-react';
 import { siteConfig } from '../../config/site';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import Button from '../common/Button';
 
 export default function LeadMagnet() {
@@ -16,6 +17,10 @@ export default function LeadMagnet() {
     const waText = encodeURIComponent(
       `Hi AIM Computer Academy, I would like to download the Complete Course Syllabus & Brochure.%0A%0A*Name:* ${name.trim()}%0A*Phone:* ${phone.trim()}`
     );
+    trackEvent(AnalyticsEvents.SYLLABUS_DOWNLOAD, {
+      name: name.trim(),
+    });
+
     window.open(`https://wa.me/${siteConfig.whatsapp.number}?text=${waText}`, '_blank', 'noopener,noreferrer');
     setDownloaded(true);
   };

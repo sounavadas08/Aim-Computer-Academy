@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send, Phone, CheckCircle2, MessageSquare } from 'lucide-react';
 import { siteConfig } from '../../config/site';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import Button from './Button';
 
 export const COURSES_LIST = [
@@ -82,6 +83,12 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
     );
 
     const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${waText}`;
+
+    // Track analytics event
+    trackEvent(AnalyticsEvents.DEMO_FORM_SUBMIT, {
+      course: formData.course,
+      timing: formData.timing,
+    });
 
     // Open WhatsApp
     window.open(waUrl, '_blank', 'noopener,noreferrer');

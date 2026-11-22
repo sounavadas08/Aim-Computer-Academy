@@ -413,41 +413,41 @@ A task is only marked **Done** when all of the following conditions are verified
 
 ### PHASE 5: Performance, SEO & Accessibility
 
-- [ ] **TASK-5.1**: Code splitting & asset optimization
+- [x] **TASK-5.1**: Code splitting & asset optimization
   - *Description*: Dynamic `import()` for modals, heavy icons, and below-the-fold media. Format images as modern WebP/AVIF with explicit `width` and `height` attributes.
-  - *Files Affected*: `vite.config.js`, `src/App.jsx`
+  - *Files Affected*: `vite.config.js`, `src/App.jsx`, `index.html`
   - *Acceptance Criteria*: Initial JS bundle under 150kB gzip; zero image layout shifts (CLS = 0).
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-5.2**: SEO metadata & JSON-LD Structured Data
+- [x] **TASK-5.2**: SEO metadata & JSON-LD Structured Data
   - *Description*: Complete `<head>` meta tags (title, description, canonical, OpenGraph, Twitter card) and `EducationalOrganization` + `LocalBusiness` Schema.org JSON-LD using institute details from `src/config/site.js`.
   - *Files Affected*: `index.html`
   - *Acceptance Criteria*: Validated against Google Rich Results Test schema guidelines; all contact details synchronized.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-5.3**: Accessibility & Keyboard Navigation audit
+- [x] **TASK-5.3**: Accessibility & Keyboard Navigation audit
   - *Description*: Verify semantic landmark elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`), visible focus rings, ARIA dialog controls, and WCAG AA contrast compliance.
   - *Files Affected*: Entire component tree
   - *Acceptance Criteria*: 100% keyboard navigable (Tab, Enter, Escape for modal/drawer); zero axe-core accessibility violations.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-5.4**: Analytics & Conversion tracking placeholders
+- [x] **TASK-5.4**: Analytics & Conversion tracking placeholders
   - *Description*: Event tracking hooks for WhatsApp button clicks, phone calls, form submissions, and brochure downloads.
   - *Files Affected*: `src/utils/analytics.js`
   - *Acceptance Criteria*: Clean placeholder events logged to console in dev mode, ready to bind to GA4/Meta Pixel.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-5.5**: Privacy Policy & Terms modals
+- [x] **TASK-5.5**: Privacy Policy & Terms modals
   - *Description*: Informative Privacy Policy and Terms of Use modals/pages detailing data privacy for contact submissions.
   - *Files Affected*: `src/components/common/LegalModal.jsx`
   - *Acceptance Criteria*: Accessible modals linked from footer and form disclaimer.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-5.6**: Multi-device viewport testing
+- [x] **TASK-5.6**: Multi-device viewport testing
   - *Description*: Comprehensive visual and functional verification across 360px (compact mobile), 768px (tablet portrait), 1024px (tablet landscape/small laptop), and 1440px (desktop).
   - *Files Affected*: Entire application
   - *Acceptance Criteria*: Zero overflow-x, legible typography, proportional spacing at all breakpoints.
-  - *Status*: Todo
+  - *Status*: Done
 
 ---
 

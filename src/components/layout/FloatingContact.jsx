@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MessageSquare } from 'lucide-react';
 import { siteConfig } from '../../config/site';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 
 export default function FloatingContact() {
   return (
@@ -11,6 +12,7 @@ export default function FloatingContact() {
       {/* Sticky Call Button (Prominent on Mobile) */}
       <a
         href={siteConfig.phoneDialUrl}
+        onClick={() => trackEvent(AnalyticsEvents.PHONE_CLICK, { location: 'floating_sticky' })}
         className="sm:hidden w-12 h-12 rounded-full bg-[#5C3D2E] text-[#FAF3E8] shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-transform border-2 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B07A4F]"
         aria-label={`Direct Call: ${siteConfig.displayPhone}`}
       >
@@ -22,6 +24,7 @@ export default function FloatingContact() {
         href={siteConfig.whatsapp.url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent(AnalyticsEvents.WHATSAPP_CLICK, { location: 'floating_sticky' })}
         className="group flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20ba5a] hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
         aria-label="Direct WhatsApp Enquiry"
       >

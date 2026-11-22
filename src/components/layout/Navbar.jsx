@@ -3,6 +3,7 @@ import { Menu, X, Phone, MessageSquare, ChevronDown } from 'lucide-react';
 import Logo from '../common/Logo';
 import Button from '../common/Button';
 import { siteConfig } from '../../config/site';
+import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 
 export default function Navbar({ onOpenDemoModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,6 +46,7 @@ export default function Navbar({ onOpenDemoModal }) {
         <div className="hidden sm:flex items-center gap-3">
           <a
             href={siteConfig.phoneDialUrl}
+            onClick={() => trackEvent(AnalyticsEvents.PHONE_CLICK, { location: 'navbar' })}
             className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-[#5C3D2E] hover:text-[#B07A4F] transition-colors rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B07A4F]"
             aria-label={`Call ${siteConfig.displayPhone}`}
           >
@@ -55,7 +57,10 @@ export default function Navbar({ onOpenDemoModal }) {
           <Button
             variant="primary"
             size="sm"
-            onClick={() => onOpenDemoModal()}
+            onClick={() => {
+              trackEvent(AnalyticsEvents.DEMO_MODAL_OPEN, { location: 'navbar_desktop' });
+              onOpenDemoModal();
+            }}
             className="shadow-sm"
           >
             Book Free Demo
