@@ -261,6 +261,25 @@ This file maintains a strict chronological record of every change, addition, mod
 
 ---
 
+### [2026-11-23 03:03] CHANGE-011
+- Task ID: TASK-2.16 (Google Map Integration)
+- Type: Feature / Config
+- Files affected:
+  - `src/config/site.js`
+  - `src/components/sections/ContactLocation.jsx`
+  - `changes.md`
+  - `task.md`
+- What changed:
+  1. Stored official Google Maps embed URL and direct directions link in `src/config/site.js`:
+     - Embed URL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.9659930736257!2d88.38215537610694!3d22.76664327935362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89b6e0b6c264f%3A0xbad6dfdf84ab652f!2sAIM%20COMPUTER%20ACADEMY!5e0!3m2!1sen!2sin!4v1795383080402!5m2!1sen!2sin`
+     - Directions URL: `https://maps.google.com/?cid=13463131705886696751`
+  2. Integrated responsive Google Map iframe inside `ContactLocation.jsx` with a navigation header, "Get Directions" action button, lazy loading, and campus visit enquiry trigger.
+- Why: User provided official Google Maps embed code and instructed to add the map at the bottom for location.
+- Approved by user: Yes (user supplied the exact Google Maps embed iframe).
+- Notes / follow-ups: Fully responsive across mobile, tablet, and desktop viewports.
+
+---
+
 ## Pending Approvals
 - None (All phases 1–6 complete).
 

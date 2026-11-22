@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MessageSquare, MapPin, Clock, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MessageSquare, MapPin, Clock, ExternalLink, Navigation } from 'lucide-react';
 import { InstagramIcon } from '../common/Icons';
 import { siteConfig } from '../../config/site';
 import SectionHeading from '../common/SectionHeading';
@@ -140,29 +140,66 @@ export default function ContactLocation({ onOpenEnquiryModal }) {
             </div>
           </div>
 
-          {/* Right Map & Enquiry Prompt Column */}
+          {/* Right Map Column (Official Google Map Integration) */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            {/* Interactive Map Placeholder Box */}
-            <div className="rounded-3xl overflow-hidden bg-[#FAF3E8] border border-[#E8D8C3] shadow-sm p-6 sm:p-8 flex flex-col items-center justify-center text-center min-h-[320px]">
-              <div className="w-16 h-16 rounded-full bg-[#F3E7D3] text-[#5C3D2E] flex items-center justify-center mb-4">
-                <MapPin className="w-8 h-8 text-[#B07A4F]" />
+            <div className="rounded-3xl overflow-hidden bg-[#FAF3E8] border border-[#E8D8C3] shadow-sm p-5 sm:p-6 flex flex-col">
+              {/* Map Header with Direct Navigation Link */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#F3E7D3] text-[#5C3D2E] flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-[#B07A4F]" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-black text-[#3B2418]">
+                      AIM COMPUTER ACADEMY Location
+                    </h4>
+                    <p className="text-xs text-[#6B4E3D]">
+                      Interactive Google Map & Campus Directions
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={siteConfig.googleMapsDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#F3E7D3] text-[#5C3D2E] hover:bg-[#5C3D2E] hover:text-[#FAF3E8] transition-colors border border-[#E8D8C3] shrink-0 self-start sm:self-auto"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>Get Directions</span>
+                  <ExternalLink className="w-3 h-3 ml-0.5" />
+                </a>
               </div>
-              <h4 className="text-xl font-black text-[#3B2418] mb-2">
-                Academy Location & Map
-              </h4>
-              <p className="text-xs sm:text-sm text-[#6B4E3D] max-w-md leading-relaxed mb-6">
-                Interactive Google Map will be embedded here as soon as exact campus coordinates or landmark are confirmed.
-              </p>
-              <div className="p-3 bg-[#F3E7D3] rounded-xl text-xs font-mono text-[#5C3D2E] border border-[#E8D8C3] mb-6">
-                {siteConfig.address}
+
+              {/* Embedded Google Map Iframe */}
+              <div className="relative w-full rounded-2xl overflow-hidden border border-[#E8D8C3] shadow-inner bg-[#F3E7D3]/40 aspect-[4/3] sm:aspect-[16/10] md:h-[420px]">
+                <iframe
+                  src={siteConfig.googleMapEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="AIM COMPUTER ACADEMY Location Map"
+                  className="w-full h-full border-0"
+                ></iframe>
               </div>
-              <Button
-                variant="primary"
-                size="md"
-                onClick={() => onOpenEnquiryModal()}
-              >
-                Schedule an In-Person Campus Visit
-              </Button>
+
+              {/* Action Button Below Map */}
+              <div className="mt-4 pt-4 border-t border-[#E8D8C3] flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p className="text-xs text-[#6B4E3D]">
+                  Visiting us? Feel free to contact our coordinator beforehand.
+                </p>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => onOpenEnquiryModal()}
+                  className="w-full sm:w-auto"
+                >
+                  Schedule an In-Person Campus Visit
+                </Button>
+              </div>
             </div>
           </div>
         </div>

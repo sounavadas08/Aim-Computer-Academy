@@ -11,7 +11,7 @@ const ADVANTAGES = [
   },
   {
     icon: Users2,
-    title: 'Small Batches (10-12 Students)',
+    title: 'Small Batches (25-30 Students)',
     description:
       'No crowded lecture halls. Small batch sizes ensure instructors know your pace, clear your doubts, and offer personal coaching.',
   },

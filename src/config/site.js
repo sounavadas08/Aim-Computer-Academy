@@ -27,12 +27,15 @@ export const siteConfig = {
     url: "https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses",
   },
 
+  // Official Google Maps Integration
+  googleMapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.9659930736257!2d88.38215537610694!3d22.76664327935362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89b6e0b6c264f%3A0xbad6dfdf84ab652f!2sAIM%20COMPUTER%20ACADEMY!5e0!3m2!1sen!2sin!4v1795383080402!5m2!1sen!2sin",
+  googleMapsDirectionsUrl: "https://maps.google.com/?cid=13463131705886696751",
+
   // Isolated Placeholders (Strictly tagged until provided by user)
   address: "[PLACEHOLDER: Institute Address, City, State, PIN]",
   city: "[PLACEHOLDER: City]",
   workingHours: "[PLACEHOLDER: Mon-Sat: 9:00 AM - 7:00 PM | Sun: Closed]",
   establishedYear: "[PLACEHOLDER: Established 2016]",
-  googleMapEmbedUrl: "[PLACEHOLDER: Google Map Embed URL]",
 
   // Navigation Links
   navLinks: [

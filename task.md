@@ -318,9 +318,9 @@ A task is only marked **Done** when all of the following conditions are verified
   - *Status*: Done
 
 - [x] **TASK-2.16**: Section 16 — Contact & Location
-  - *Description*: Physical address placeholder, interactive Google Map embed placeholder, working hours, direct phone link, email link, and Instagram link.
-  - *Files Affected*: `src/components/sections/ContactLocation.jsx`
-  - *Acceptance Criteria*: All contact channels wired to `siteConfig`; map placeholder gracefully styled to match cream/brown theme.
+  - *Description*: Physical address placeholder, official interactive Google Map embed (AIM COMPUTER ACADEMY), direct directions link, working hours, direct phone link, email link, and Instagram link.
+  - *Files Affected*: `src/config/site.js`, `src/components/sections/ContactLocation.jsx`
+  - *Acceptance Criteria*: Official Google Maps iframe embedded with lazy loading and direct directions button; all contact channels wired to `siteConfig`.
   - *Status*: Done
 
 - [x] **TASK-2.17**: Section 17 — Footer
