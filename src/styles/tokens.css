@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Design Tokens: AIM COMPUTER ACADEMY
+   Strict Cream and Brown Palette & Scales (Rule 3)
+   ========================================================================== */
+
+:root {
+  /* Surface & Background Palette (Cream) */
+  --color-cream-bg: #FAF3E8;
+  --color-cream-surface: #F3E7D3;
+  --color-cream-card: #F7EFE2;
+  --color-cream-border: #E8D8C3;
+  --color-cream-darker: #DFCEB7;
+
+  /* Typography & Primary Brand Elements (Brown) */
+  --color-brown-primary: #5C3D2E;
+  --color-brown-dark: #3B2418;
+  --color-brown-muted: #6B4E3D;
+  --color-brown-light: #7D5A47;
+
+  /* Accents & States (Caramel) */
+  --color-caramel-accent: #B07A4F;
+  --color-caramel-hover: #9C673E;
+  --color-caramel-light: #DFBFA1;
+
+  /* Semantic Feedback */
+  --color-success: #2E6B47;
+  --color-error: #9B2C2C;
+
+  /* Typography Scales */
+  --font-family-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-condensed: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Depth & Shadows */
+  --shadow-warm-sm: 0 2px 8px -1px rgba(59, 36, 24, 0.06);
+  --shadow-warm-md: 0 8px 24px -4px rgba(59, 36, 24, 0.08);
+  --shadow-warm-lg: 0 16px 36px -6px rgba(59, 36, 24, 0.12);
+  --shadow-warm-hover: 0 20px 40px -8px rgba(59, 36, 24, 0.16);
+}
