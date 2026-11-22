@@ -1,66 +1,66 @@
 import React, { useState } from 'react';
-import { Sparkles, Phone, MessageSquare, ArrowRight, CheckCircle2, Laptop, Code2, Calculator, Palette, Monitor } from 'lucide-react';
+import { Sparkles, Phone, MessageSquare, ArrowRight, CheckCircle2, Laptop, Code2, GraduationCap, Monitor } from 'lucide-react';
 import Button from '../common/Button';
 import { siteConfig } from '../../config/site';
 
 const HERO_CARDS = [
   {
-    id: 'office',
-    title: 'MS Office & Excel Pro',
-    tag: 'Essential Skills',
-    icon: Monitor,
-    duration: '2 Months',
+    id: 'school-ai',
+    title: 'AI for Class 6–10',
+    tag: 'CBSE & ICSE',
+    icon: Sparkles,
+    duration: '3–6 Months',
     mode: 'Practical Labs',
-    highlight: 'Advanced Formulas, VLOOKUP, Pivot Tables & MIS Reports',
+    highlight: 'Python AI Basics, Computer Vision, Smart Chatbots & CBSE Code 417',
     color: '#5C3D2E',
     bgColor: '#F3E7D3',
     rotation: '-rotate-6 sm:-rotate-12',
   },
   {
-    id: 'web',
-    title: 'Web Design & Coding',
-    tag: 'High Demand',
+    id: 'icse-java',
+    title: 'ICSE & ISC Java / BlueJ',
+    tag: 'Board Toppers Track',
     icon: Code2,
-    duration: '4 Months',
-    mode: 'Project-Based',
-    highlight: 'HTML5, CSS3, Tailwind, JavaScript & Live Website Projects',
+    duration: 'Academic Year',
+    mode: 'BlueJ Labs',
+    highlight: 'OOP Concepts, String Algorithms, 10-Year Board Papers & Practicals',
     color: '#3B2418',
     bgColor: '#FAF3E8',
     rotation: '-rotate-3 sm:-rotate-6',
   },
   {
-    id: 'python',
-    title: 'Python Programming',
-    tag: 'Career Accelerator',
+    id: 'data-science',
+    title: 'Data Science & Analytics',
+    tag: 'High Demand',
     icon: Laptop,
-    duration: '3 Months',
-    mode: 'Hands-on Labs',
-    highlight: 'Core Python, Logic Building, Automation & Data Analytics',
+    duration: '4 Months',
+    mode: 'Real Datasets',
+    highlight: 'Python, NumPy, Pandas, Matplotlib & Exploratory Data Analysis',
     color: '#B07A4F',
     bgColor: '#FAF3E8',
     rotation: 'rotate-0',
     featured: true,
   },
   {
-    id: 'tally',
-    title: 'Tally Prime with GST',
-    tag: 'Job Ready',
-    icon: Calculator,
-    duration: '3 Months',
-    mode: 'Industry Scenarios',
-    highlight: 'E-Invoicing, Balance Sheets, Tax Filing & Accounting',
+    id: 'cbse-cs',
+    title: 'CBSE CS & IT (Code 417/083)',
+    tag: 'Class 6–12',
+    icon: Monitor,
+    duration: 'School Track',
+    mode: 'Code & Build',
+    highlight: 'Python Programming, MySQL Queries & CBSE Board Practical Files',
     color: '#5C3D2E',
     bgColor: '#F3E7D3',
     rotation: 'rotate-3 sm:rotate-6',
   },
   {
-    id: 'design',
-    title: 'Graphic & Media Design',
-    tag: 'Creative Track',
-    icon: Palette,
-    duration: '3 Months',
-    mode: 'Portfolio Focused',
-    highlight: 'Photoshop, Illustrator, Branding & Social Media Graphics',
+    id: 'college-cs',
+    title: 'B.Sc, B.Tech & BCA (CS)',
+    tag: 'Graduation Batches',
+    icon: GraduationCap,
+    duration: 'Semester-Wise',
+    mode: 'University Labs',
+    highlight: 'Data Structures (DSA), C/C++, Java, DBMS & University Capstone Projects',
     color: '#3B2418',
     bgColor: '#FAF3E8',
     rotation: 'rotate-6 sm:rotate-12',
@@ -68,11 +68,11 @@ const HERO_CARDS = [
 ];
 
 export default function Hero({ onOpenDemoModal }) {
-  const [activeCard, setActiveCard] = useState('python');
+  const [activeCard, setActiveCard] = useState('data-science');
 
   return (
     <section id="hero" className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-[#FAF3E8]">
-      {/* Organic Wave Background Ribbon Divider (Inspired by Reference Video) */}
+      {/* Organic Wave Background Ribbon Divider */}
       <div className="absolute top-0 left-0 right-0 h-44 sm:h-56 overflow-hidden pointer-events-none opacity-40">
         <svg
           viewBox="0 0 1440 320"
@@ -84,17 +84,17 @@ export default function Hero({ onOpenDemoModal }) {
         </svg>
       </div>
 
-      {/* Subtle Floating Skill Badges (Decorative Polish) */}
-      <div className="hidden xl:block absolute top-40 left-12 animate-float pointer-events-none opacity-70">
+      {/* Subtle Floating Skill Badges */}
+      <div className="hidden xl:block absolute top-40 left-10 animate-float pointer-events-none opacity-80">
         <div className="px-3.5 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] shadow-sm flex items-center gap-1.5">
-          <Monitor className="w-3.5 h-3.5 text-[#B07A4F]" />
-          <span>Excel & MIS</span>
+          <Sparkles className="w-3.5 h-3.5 text-[#B07A4F]" />
+          <span>CBSE • ICSE • ISC • WB Board</span>
         </div>
       </div>
-      <div className="hidden xl:block absolute top-48 right-14 animate-float-alt pointer-events-none opacity-70">
+      <div className="hidden xl:block absolute top-48 right-10 animate-float-alt pointer-events-none opacity-80">
         <div className="px-3.5 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] shadow-sm flex items-center gap-1.5">
-          <Calculator className="w-3.5 h-3.5 text-[#B07A4F]" />
-          <span>Tally Prime + GST</span>
+          <GraduationCap className="w-3.5 h-3.5 text-[#B07A4F]" />
+          <span>B.Sc • B.Tech • BCA (CS Major)</span>
         </div>
       </div>
 
@@ -104,20 +104,20 @@ export default function Hero({ onOpenDemoModal }) {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] uppercase tracking-wider mb-6 shadow-sm animate-warm-pulse">
             <Sparkles className="w-3.5 h-3.5 text-[#B07A4F]" />
-            <span>Admissions Open for New Practical Batches</span>
+            <span>Admissions Open: School Boards & Degree Computer Batches</span>
           </div>
 
           {/* Outcome-Driven Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#3B2418] tracking-tight leading-[1.1] mb-6">
-            Master Practical Computer Skills.{' '}
+            Master Practical Computer Science.{' '}
             <span className="block text-[#5C3D2E] underline decoration-[#B07A4F] decoration-wavy decoration-2 underline-offset-8 mt-1">
-              Build a Career That Thrives.
+              From School Boards to College Degrees.
             </span>
           </h1>
 
           {/* Supporting Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-[#6B4E3D] max-w-2xl mx-auto leading-relaxed mb-8">
-            Learn from experienced instructors in modern computer labs. Small batches, personalized 1-on-1 attention, hands-on live exercises, and verified course certification.
+            Specialized coaching for Class 6–10 (CBSE, ICSE, WB Board), Higher Secondary (ISC/CBSE), AI & Data Science, and Graduation batches for B.Sc, B.Tech & BCA Computer Science majors with 1-on-1 practical lab guidance.
           </p>
 
           {/* CTAs */}
@@ -155,22 +155,22 @@ export default function Hero({ onOpenDemoModal }) {
           {/* Reassurance Trust Pills */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-[#6B4E3D]">
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> 100% Practical Lab Training
+              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> Class 6–10 Board Syllabus Aligned
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> Small Batches (Max 12 Students)
+              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> 100% Practical Lab Workstation for Every Student
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> Government Recognized Certification
+              <CheckCircle2 className="w-4 h-4 text-[#2E6B47]" /> College Semester Lab & Project Guidance
             </span>
           </div>
         </div>
 
-        {/* Fanned-Out Interactive Course Card Deck (From Reference UI) */}
+        {/* Fanned-Out Interactive Course Card Deck */}
         <div className="mt-10 sm:mt-14 max-w-5xl mx-auto">
           <div className="text-center mb-6">
             <span className="text-xs font-black uppercase tracking-wider text-[#B07A4F]">
-              Explore Our Training Tracks — Click Any Card Below
+              Explore Our Academic & Degree Tracks — Click Any Card Below
             </span>
           </div>
 
@@ -185,11 +185,10 @@ export default function Hero({ onOpenDemoModal }) {
                   <div
                     key={card.id}
                     onClick={() => setActiveCard(card.id)}
-                    className={`relative cursor-pointer transition-all duration-300 transform rounded-3xl p-5 sm:p-6 w-full sm:w-64 border ${
-                      isSelected
+                    className={`relative cursor-pointer transition-all duration-300 transform rounded-3xl p-5 sm:p-6 w-full sm:w-64 border ${isSelected
                         ? 'z-30 scale-105 sm:-translate-y-6 shadow-2xl border-[#5C3D2E] bg-white ring-2 ring-[#B07A4F]'
                         : `z-10 hover:z-20 hover:-translate-y-2 hover:scale-100 shadow-lg border-[#E8D8C3] bg-[#FAF3E8]/95 sm:${card.rotation}`
-                    }`}
+                      }`}
                   >
                     {/* Top Tag & Duration */}
                     <div className="flex items-center justify-between mb-4">

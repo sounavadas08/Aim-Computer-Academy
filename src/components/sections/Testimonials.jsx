@@ -4,36 +4,36 @@ import SectionHeading from '../common/SectionHeading';
 
 const TESTIMONIALS = [
   {
-    name: 'Priyanka Sen',
-    course: 'Tally Prime with GST',
-    role: 'Accounts Assistant at Private Firm',
+    name: 'Rohan Banerjee',
+    course: 'ICSE Class 10 Computer Applications',
+    role: 'Scored 98/100 in ICSE Board Exam',
     rating: 5,
     quote:
-      'The hands-on practical training in Tally Prime gave me the exact skills required for my accounting job. The faculty explained every debit/credit concept and GST billing process patiently.',
+      'The BlueJ programming sessions and doubt-clearing at AIM Computer Academy were phenomenal. The faculty solved 10 years of board papers and practical output questions with us. I scored 98 in my ICSE computer exam!',
   },
   {
-    name: 'Amitabh Roy',
-    course: 'Advanced MS Office & Excel Specialist',
-    role: 'Operations Executive',
+    name: 'Ananya Chakraborty',
+    course: 'BCA Semester Lab & DSA Batch',
+    role: 'BCA 2nd Year Student (MAKAUT)',
     rating: 5,
     quote:
-      'I needed advanced Excel for my corporate work. Learning VLOOKUP, pivot tables, and automated reports at AIM Computer Academy was the best career decision. Highly recommended!',
+      'Data Structures and Algorithms in C were very tough in college lectures. The lab-first approach and 1-on-1 code debugging here made pointer concepts, linked lists, and trees crystal clear. Best coaching for CS majors.',
   },
   {
-    name: 'Sneha Mondal',
-    course: 'Web Design & Frontend Development',
-    role: 'Junior Web Designer',
+    name: 'Siddharth Roy',
+    course: 'Artificial Intelligence (Class 9 - CBSE Code 417)',
+    role: 'CBSE Class 9 Student',
     rating: 5,
     quote:
-      'Unlike places that just read slides, here we coded our own websites every single day in the lab. The small batch size meant I could ask questions without hesitation.',
+      'Learning AI with hands-on computer vision and Python models made the subject exciting rather than just textbook theory. The projects we built in the academy lab were top-rated in our school exhibition.',
   },
   {
-    name: 'Subham Mukherjee',
-    course: 'Certificate in Basic Computer',
-    role: 'College Student',
+    name: 'Deblina Das',
+    course: 'WBCHSE Modern Computer Applications',
+    role: 'Higher Secondary WB Board Student',
     rating: 5,
     quote:
-      'I was completely new to computers before joining. The faculty made me comfortable from day one. My typing speed and software skills improved significantly.',
+      'The bilingual guidance in Bengali and English helped me grasp logic gates, DBMS, and Excel practicals with ease. The faculty gave us precise test paper suggestions and conducted regular mock exams.',
   },
 ];
 
@@ -52,9 +52,9 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 md:py-28 bg-[#F3E7D3] border-t border-[#E8D8C3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Student Experiences"
-          title="What Our Trainees Say About Learning with Us"
-          subtitle="Real reviews from students who built their practical computer confidence at AIM Computer Academy."
+          badge="Student Success Stories"
+          title="What Our School & College Students Say"
+          subtitle="Real reviews from students who achieved high board marks and university semester grades with AIM Computer Academy."
         />
 
         {/* Testimonials Carousel Cards */}

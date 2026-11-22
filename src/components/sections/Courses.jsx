@@ -1,133 +1,154 @@
 import React, { useState } from 'react';
-import { Clock, Monitor, BookOpen, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Clock, Monitor, BookOpen, CheckCircle, ArrowRight, Sparkles, GraduationCap } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
 const COURSES = [
   {
-    id: 'basic-it',
-    title: 'Certificate in Basic Computer & IT Tools',
-    category: 'Foundation',
-    duration: '2 Months',
-    mode: 'Offline Practical Labs',
-    batchTiming: 'Morning / Evening Batches',
+    id: 'school-ai',
+    title: 'Artificial Intelligence (AI) for Class 6–10',
+    category: 'AI & Data Science',
+    boards: 'CBSE (Code 417) • ICSE • WB Board',
+    duration: '3 to 6 Months / Academic Track',
+    mode: 'Hands-on Labs & AI Projects',
+    batchTiming: 'After-School & Weekend Batches',
     description:
-      'Ideal for beginners, students, and seniors. Master Windows, file management, typing speed, internet operations, email etiquette, and cyber awareness.',
+      'Specially designed for school students (Class 6–10). Master foundational AI concepts aligned with CBSE Code 417, ICSE, and WB Board curricula with interactive visual models.',
     curriculum: [
-      'Computer Fundamentals & Hardware Basics',
-      'Windows OS, File Management & Security',
-      'English & Bengali / Regional Typing Skills',
-      'Web Browsing, Online Safety & Email Etiquette',
-    ],
-    popular: false,
-  },
-  {
-    id: 'msoffice',
-    title: 'Advanced MS Office & Excel Specialist',
-    category: 'Office Productivity',
-    duration: '3 Months',
-    mode: 'Practical Lab Training',
-    batchTiming: 'Weekday & Weekend Batches',
-    description:
-      'The essential skillset for administrative, corporate, and back-office roles. In-depth Microsoft Word, advanced Excel data analysis, and PowerPoint.',
-    curriculum: [
-      'MS Word: Documentation, Mail Merge & Formatting',
-      'MS Excel: VLOOKUP, XLOOKUP, Pivot Tables & Charts',
-      'Formulas, Nested IF, Conditional Logic & Data Validation',
-      'PowerPoint Presentations & Professional Slides',
+      'Python Programming Fundamentals & Algorithmic Logic',
+      'Computer Vision & Teachable Machine Mini-Projects',
+      'Natural Language Processing (NLP) & Smart Chatbots',
+      'Board AI Practical Records & Ethics in Computing',
     ],
     popular: true,
+    filterTags: ['Class 6–10 (School)', 'CBSE / ICSE / ISC', 'WB Board', 'AI & Data Science'],
   },
   {
-    id: 'tally',
-    title: 'Professional Accounting with Tally Prime & GST',
-    category: 'Finance & Accounts',
-    duration: '3 Months',
-    mode: 'Real Company Projects',
-    batchTiming: 'Flexible Timing Options',
+    id: 'data-science',
+    title: 'Data Science & Python Analytics',
+    category: 'AI & Data Science',
+    boards: 'Class 8–10, Senior Secondary & College',
+    duration: '4 Months Practical Lab',
+    mode: 'Real-World Dataset Analysis',
+    batchTiming: 'Weekday Evenings / Weekend Batches',
     description:
-      'Become industry-ready for accounting and bookkeeping roles. Hands-on learning with real corporate balance sheets, vouchers, and GST returns.',
+      'Develop genuine data literacy and analytical thinking. Learn to clean, visualize, and extract insights from real datasets using industry-standard Python libraries.',
     curriculum: [
-      'Double Entry Bookkeeping & Ledger Maintenance',
-      'Tally Prime: Inventory, Vouchers & Invoicing',
-      'GST Accounting, CGST/SGST/IGST Calculations',
-      'Payroll Management, TDS Basics & Profit/Loss Reports',
+      'Python for Data Science (NumPy, Pandas & Jupyter)',
+      'Data Visualization with Matplotlib & Seaborn',
+      'Exploratory Data Analysis (EDA) on Real Datasets',
+      'Statistical Reasoning & Intro to Machine Learning',
+    ],
+    popular: false,
+    filterTags: ['Class 6–10 (School)', 'B.Sc / B.Tech / BCA', 'AI & Data Science'],
+  },
+  {
+    id: 'icse-isc',
+    title: 'ICSE & ISC Computer Applications / Science (Java)',
+    category: 'CBSE / ICSE / ISC',
+    boards: 'ICSE (Class 9–10) & ISC (Class 11–12)',
+    duration: 'Academic Year / Board Batch',
+    mode: 'BlueJ Lab Training & Theory',
+    batchTiming: 'Morning & Evening Batches',
+    description:
+      'Rigorous, 100% board-oriented preparation for ICSE Computer Applications (Java / BlueJ) and ISC Computer Science. Master OOP theory, nested logic, and get full marks in practicals.',
+    curriculum: [
+      'Java OOP Principles, BlueJ Environment & Classes',
+      'Arrays, String Manipulation, Sorting & Recursion',
+      '10-Year Board Questions, Specimen Papers & Mock Tests',
+      '100-Mark Practical Output & Project Documentation',
     ],
     popular: true,
+    filterTags: ['Class 6–10 (School)', 'CBSE / ICSE / ISC'],
   },
   {
-    id: 'webdev',
-    title: 'Modern Web Design & Frontend Development',
-    category: 'Technology',
-    duration: '4 Months',
-    mode: 'Project-Based Learning',
-    batchTiming: 'Weekday Evenings / Weekends',
+    id: 'cbse-cs-it',
+    title: 'CBSE Computer Science & IT (Python & SQL)',
+    category: 'CBSE / ICSE / ISC',
+    boards: 'Class 6–10 (Code 165/402) & 11–12 (Code 083)',
+    duration: 'Academic Year / Foundation Track',
+    mode: 'Practical Labs + Board Theory',
+    batchTiming: 'Weekday After-School Batches',
     description:
-      'Build responsive websites from scratch. Learn semantic HTML5, modern CSS with Tailwind, interactive JavaScript, and live site deployment.',
+      'Comprehensive coaching for CBSE secondary & senior secondary students. Covers Python programming, database management with MySQL, cyber ethics, and board exam files.',
     curriculum: [
-      'Semantic HTML5 & Modern CSS3 Layouts (Flex & Grid)',
-      'Responsive Mobile-First Web Design Principles',
-      'Modern JavaScript (ES6+), DOM Manipulation & APIs',
-      'Live Portfolio Project & GitHub Deployment',
+      'Python Programming, Functions, Loops & File Handling',
+      'MySQL Database Queries, Table Joins & SQL Operations',
+      'Computer Networks, Cyber Safety & Web Services',
+      'CBSE Board Practical Files & Pre-Board Mock Exams',
     ],
     popular: false,
+    filterTags: ['Class 6–10 (School)', 'CBSE / ICSE / ISC'],
   },
   {
-    id: 'python',
-    title: 'Python Programming & Data Fundamentals',
-    category: 'Programming',
-    duration: '3 Months',
-    mode: 'Code & Build Labs',
-    batchTiming: 'Evening Batches Available',
-    description:
-      'Start your programming journey with clean Python code. Great for college students, aspiring analysts, and problem solvers.',
-    curriculum: [
-      'Python Syntax, Variables, Control Flow & Loops',
-      'Functions, Modules, File Handling & Error Logic',
-      'Object-Oriented Programming (OOP) Fundamentals',
-      'Working with Data Libraries & Project Building',
-    ],
-    popular: false,
-  },
-  {
-    id: 'graphic',
-    title: 'Graphic Design & Digital Creative Media',
-    category: 'Design',
-    duration: '3 Months',
-    mode: 'Portfolio Creation',
+    id: 'wb-board',
+    title: 'West Bengal Board Computer Applications (Class 6–12)',
+    category: 'WB Board',
+    boards: 'WBBSE (Class 6–10) & WBCHSE (Class 11–12)',
+    duration: 'Academic Year / Exam Prep',
+    mode: 'Bilingual (English + Bengali) Labs',
     batchTiming: 'Morning & Afternoon Batches',
     description:
-      'Master visual communication and commercial graphics for social media, print advertising, and corporate branding.',
+      'Dedicated coaching in English and Bengali for WB Board students (Madhyamik & HS COMA/COMS). In-depth coverage of computer fundamentals, MS Office, DBMS, and C coding.',
     curriculum: [
-      'Design Theory, Color Harmony & Typography Principles',
-      'Photo Editing & Retouching in Adobe Photoshop',
-      'Vector Illustrations & Logo Creation in Illustrator',
-      'Social Media Creatives, Flyers & Print Formats',
+      'Logic Gates, Boolean Algebra & Number Systems',
+      'MS Office (Word, Excel, PowerPoint, Access) Mastery',
+      'DBMS Fundamentals & Introduction to C Programming',
+      'Test Paper Solving, Suggestion Practice & Lab Marks Prep',
     ],
     popular: false,
+    filterTags: ['Class 6–10 (School)', 'WB Board'],
   },
+  {
+    id: 'graduation-cs',
+    title: 'Graduation Batches: B.Sc, B.Tech & BCA (CS Major)',
+    category: 'B.Sc / B.Tech / BCA',
+    boards: 'MAKAUT, CU & State University Undergrads',
+    duration: 'Semester-Wise / 6 Months',
+    mode: 'University Lab & Project Mentorship',
+    batchTiming: 'Weekend & Evening College Batches',
+    description:
+      'Advanced semester theory and laboratory mentoring for Computer Science majors. Master core foundational subjects, lab assignments, viva preparation, and university projects.',
+    curriculum: [
+      'Data Structures & Algorithms (DSA) in C / C++ / Java',
+      'Object-Oriented Programming (Java, C++, Python)',
+      'DBMS (SQL/Relational), Operating Systems & Networks',
+      'University Semester Lab Assignments & Capstone Projects',
+    ],
+    popular: true,
+    filterTags: ['B.Sc / B.Tech / BCA'],
+  },
+];
+
+const FILTER_TABS = [
+  'All',
+  'Class 6–10 (School)',
+  'CBSE / ICSE / ISC',
+  'WB Board',
+  'B.Sc / B.Tech / BCA',
+  'AI & Data Science',
 ];
 
 export default function Courses({ onOpenDemoModal }) {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Foundation', 'Office Productivity', 'Finance & Accounts', 'Technology', 'Design'];
-
   const filteredCourses =
-    filter === 'All' ? COURSES : COURSES.filter((c) => c.category === filter);
+    filter === 'All'
+      ? COURSES
+      : COURSES.filter((c) => c.filterTags.includes(filter));
 
   return (
     <section id="courses" className="py-20 md:py-28 bg-[#FAF3E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Career Programs"
-          title="Practical Courses Designed for Real Jobs"
-          subtitle="All courses include dedicated computer workstations, step-by-step guidance, small batch sizes, and practical exams."
+          badge="Academic & Degree Programs"
+          title="School Board Exams & University Computer Science Coaching"
+          subtitle="Specialized practical lab batches for Class 6–10 (CBSE, ICSE, WB Board), Higher Secondary (ISC/CBSE), and Graduation batches for B.Sc, B.Tech & BCA Computer Science majors."
         />
 
         {/* Category Filter Pills */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {categories.map((cat) => (
+          {FILTER_TABS.map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -155,15 +176,22 @@ export default function Courses({ onOpenDemoModal }) {
             >
               <div>
                 {/* Header Tag & Duration */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3">
                   <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#F3E7D3] text-[#5C3D2E]">
                     {course.category}
                   </span>
                   {course.popular && (
                     <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#B07A4F] text-white">
-                      <Sparkles className="w-3 h-3" /> Popular
+                      <Sparkles className="w-3 h-3" /> Recommended
                     </span>
                   )}
+                </div>
+
+                {/* Target Boards Badge */}
+                <div className="mb-3">
+                  <span className="inline-block text-[11px] font-bold text-[#B07A4F] bg-[#FAF3E8] px-2 py-0.5 rounded border border-[#E8D8C3]">
+                    {course.boards}
+                  </span>
                 </div>
 
                 {/* Course Title */}
@@ -180,7 +208,7 @@ export default function Courses({ onOpenDemoModal }) {
                 <div className="grid grid-cols-2 gap-2 p-3 rounded-2xl bg-[#F3E7D3]/60 border border-[#E8D8C3] text-xs text-[#3B2418] mb-6">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-[#B07A4F] shrink-0" />
-                    <span>{course.duration}</span>
+                    <span className="truncate">{course.duration}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Monitor className="w-3.5 h-3.5 text-[#B07A4F] shrink-0" />
@@ -191,7 +219,7 @@ export default function Courses({ onOpenDemoModal }) {
                 {/* Key Syllabus Modules */}
                 <div className="space-y-2 mb-6">
                   <p className="text-[11px] font-bold uppercase tracking-wider text-[#B07A4F]">
-                    Key Skills Covered:
+                    Key Topics & Practicals:
                   </p>
                   {course.curriculum.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-xs text-[#6B4E3D]">
@@ -204,7 +232,7 @@ export default function Courses({ onOpenDemoModal }) {
 
               {/* Bottom Card Actions */}
               <div className="pt-4 border-t border-[#E8D8C3] flex items-center justify-between gap-3">
-                <span className="text-[11px] text-[#6B4E3D] font-medium">
+                <span className="text-[11px] text-[#6B4E3D] font-medium truncate">
                   {course.batchTiming}
                 </span>
                 <Button

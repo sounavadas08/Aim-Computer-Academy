@@ -43,7 +43,7 @@ The visual theme is warm, premium, friendly, and trustworthy. All color tokens, 
 1. **Navbar**: Sticky blur-on-scroll header with official logo, phone dialer, navigation links, and accessible mobile drawer.
 2. **Hero**: Outcome-driven headline (`Master Practical Computer Skills. Build a Career That Thrives`), CTAs (Demo, WhatsApp, Phone), and an **interactive fanned-out 5-card course deck** inspired by the Swiss reference UI.
 3. **Trust Strip**: Animated milestone counters for 2500+ students, 8+ years, 15+ courses, and 100% lab terminal focus.
-4. **Courses**: Full program catalog with category filters (Basic IT, MS Office, Tally Prime + GST, Web Design, Python, Graphic Design) with course enquiry triggers.
+4. **Courses**: School & University curriculum catalog with category filters (Artificial Intelligence for Class 6–10, Data Science & Python Analytics, ICSE & ISC Java/BlueJ, CBSE Computer Science & IT, WB Board Computer Applications, and Graduation batches for B.Sc, B.Tech & BCA Computer Science majors) with course enquiry triggers.
 5. **Why Choose Us**: 6 institutional pillars (hands-on practice, small batches, personal coaching, recognized certification, career prep, doubt clearing).
 6. **How It Works**: 4-step progressive stepper from demo booking to certification.
 7. **Instructors**: Faculty credentials, experience, and domain specialties.

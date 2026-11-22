@@ -15,7 +15,7 @@ export default function Footer({ onOpenDemoModal, onOpenLegalModal }) {
           <div className="lg:col-span-4 space-y-4">
             <Logo variant="light" />
             <p className="text-sm text-[#DFCEB7] leading-relaxed max-w-sm">
-              Empowering students, professionals, and aspiring tech leaders through practical, hands-on computer training and recognized certifications.
+              Empowering school students (Class 6–10, CBSE, ICSE, ISC, WB Board) and university undergraduates (B.Sc, B.Tech, BCA) with rigorous practical computer science and programming training.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
@@ -68,33 +68,38 @@ export default function Footer({ onOpenDemoModal, onOpenLegalModal }) {
             </ul>
           </div>
 
-          {/* Col 3: Popular Courses */}
+          {/* Col 3: Academic Programs */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-black uppercase tracking-wider text-[#B07A4F]">Featured Programs</h4>
+            <h4 className="text-xs font-black uppercase tracking-wider text-[#B07A4F]">Academic & Degree Tracks</h4>
             <ul className="space-y-2 text-sm text-[#DFCEB7]">
               <li>
                 <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
-                  Basic Computer & IT Tools
+                  AI for Class 6–10 (CBSE/ICSE)
                 </a>
               </li>
               <li>
                 <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
-                  Advanced MS Office & Excel
+                  Data Science & Python Analytics
                 </a>
               </li>
               <li>
                 <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
-                  Web Development & Coding
+                  ICSE & ISC Computer Applications
                 </a>
               </li>
               <li>
                 <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
-                  Computerized Accounting (Tally)
+                  CBSE Computer Science & IT
                 </a>
               </li>
               <li>
                 <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
-                  Python Programming & Data
+                  WB Board Computer Applications
+                </a>
+              </li>
+              <li>
+                <a href="#courses" className="hover:text-[#FAF3E8] transition-colors">
+                  B.Sc, B.Tech & BCA (CS Major)
                 </a>
               </li>
             </ul>

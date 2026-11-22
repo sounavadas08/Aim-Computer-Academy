@@ -189,6 +189,40 @@ This file maintains a strict chronological record of every change, addition, mod
 
 ---
 
+### [2026-11-23 02:15] CHANGE-009
+- Task ID: TASK-2.4 (Courses Curriculum Update)
+- Type: Feature / Content / SEO
+- Files affected:
+  - `src/components/sections/Courses.jsx`
+  - `src/components/sections/Hero.jsx`
+  - `src/components/common/EnquiryModal.jsx`
+  - `src/components/layout/Footer.jsx`
+  - `src/components/sections/FAQ.jsx`
+  - `src/components/sections/Instructors.jsx`
+  - `src/components/sections/Testimonials.jsx`
+  - `index.html`
+  - `README.md`
+  - `task.md`
+  - `changes.md`
+- What changed:
+  1. Updated `Courses.jsx` with the exact curriculum requested by the user:
+     - Artificial Intelligence (AI) for Class 6–10 (CBSE Code 417, ICSE, WB Board).
+     - Data Science & Python Analytics (Class 8–10, Senior Secondary & College).
+     - ICSE & ISC Computer Applications / Science (Java / BlueJ OOPs, Board Papers & Practicals).
+     - CBSE Computer Science & IT (Python, MySQL, Cyber Safety & Practical Files).
+     - West Bengal Board Computer Applications (Class 6–12 WBBSE Madhyamik & WBCHSE Modern Computer Applications in English & Bengali).
+     - Graduation Batches for B.Sc, B.Tech & BCA (Computer Science Major — DSA, C/C++, Java, DBMS, University Semester Labs & Projects).
+  2. Implemented responsive multi-category filter tabs: `All`, `Class 6–10 (School)`, `CBSE / ICSE / ISC`, `WB Board`, `B.Sc / B.Tech / BCA`, and `AI & Data Science`.
+  3. Synchronized `Hero.jsx` interactive fanned card deck with the updated courses, plus updated headline and trust badges to highlight school boards and college graduation batches.
+  4. Updated `EnquiryModal.jsx` dropdown `COURSES_LIST` so students/parents can select their exact school board and graduation batches with direct WhatsApp integration.
+  5. Updated `Footer.jsx` featured courses list.
+  6. Updated `FAQ.jsx`, `Instructors.jsx`, `Testimonials.jsx`, and `index.html` (SEO meta title, description, keywords, and JSON-LD schema) to reflect the AI, Data Science, Board exam, and University CS major programs.
+- Why: User requested replacing the generic foundational courses with targeted academic courses for AI, Data Science, Computer Science, Computer Applications across Class 6–10 (CBSE, ICSE, ISC, WB Board) and graduation batches for B.Sc, B.Tech & BCA in CS major.
+- Approved by user: Yes (requested directly with screenshot reference).
+- Notes / follow-ups: All design tokens, theme rules, and responsive layouts fully preserved.
+
+---
+
 ## Pending Approvals
 - None (All phases 1–6 complete).
 
@@ -207,7 +241,7 @@ This file maintains a strict chronological record of every change, addition, mod
 ---
 
 ## Open Questions
-1. **Course List & Modes**: What courses should be featured (title, duration, mode: Online/Offline/Hybrid, target audience)?
+1. **Course List & Modes**: [RESOLVED] User specified AI, Data Science, Computer Science, Computer Applications for Class 6-10 (CBSE, ICSE, ISC, WB Board) and Graduation Batches for B.Sc, B.Tech & BCA in CS major.
 2. **Form Backend Selection**: Which backend handler should be connected to the demo booking/enquiry form (WhatsApp redirect, Google Sheets script, EmailJS, or REST API endpoint)?
 
 ---
@@ -218,7 +252,7 @@ The following items are active placeholders and must be replaced once official d
 1. **Address & City**: `[PLACEHOLDER: Institute Address & City to be provided]`.
 2. **Working Hours**: `[PLACEHOLDER: Institute Working Hours to be provided]`.
 3. **Year of Establishment**: `[PLACEHOLDER: Established Year to be provided]`.
-4. **Courses List & Details**: `[PLACEHOLDER: 4-6 representative course cards with syllabus, duration, mode, and batch timings]`.
+4. **Courses List & Details**: [RESOLVED] Integrated full curriculum for AI, Data Science, ICSE/ISC, CBSE CS/IT, WB Board, and B.Sc/B.Tech/BCA (CS Major).
 5. **Fees / Fee Quote Ranges**: `[PLACEHOLDER: Course fee structures and fee quote path]`.
 6. **Testimonials**: `[PLACEHOLDER: Student reviews, photos, names, and course completed]`.
 7. **Results & Student Achievements**: `[PLACEHOLDER: Verified student hiring, certifications, and placement highlights]`.

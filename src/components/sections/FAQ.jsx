@@ -4,28 +4,28 @@ import SectionHeading from '../common/SectionHeading';
 
 const FAQS = [
   {
-    q: 'Do I need prior computer knowledge to enroll in a course?',
-    a: 'Not at all! Our foundational courses (such as Basic Computer & IT Tools or MS Office) are specifically crafted for complete beginners. Our instructors begin from absolute fundamentals, including mouse handling, keyboard shortcuts, and file management.',
+    q: 'Which school boards and classes do your computer programs cover?',
+    a: 'We conduct dedicated batches for school students from Class 6 to 10 and Higher Secondary (11 & 12) across CBSE (Code 165, Code 402, Code 417 AI, Code 083 CS), ICSE (Computer Applications Java/BlueJ), ISC (Computer Science), and West Bengal Board (WBBSE Madhyamik & WBCHSE Modern Computer Applications in both English and Bengali mediums).',
+  },
+  {
+    q: 'Do you offer specialized batches for college graduation students (B.Sc, B.Tech, BCA)?',
+    a: 'Yes! We run specialized university semester theory and practical laboratory batches for B.Sc (Computer Science Hons), B.Tech (CSE/IT), and BCA undergraduates. Our coaching covers Data Structures & Algorithms (DSA), OOPs (C++, Java, Python), Database Management (DBMS), Operating Systems, and semester practical project guidance.',
   },
   {
     q: 'What is the duration of your computer courses and batch timings?',
-    a: 'Course durations typically range from 2 to 4 months depending on whether you choose foundational office tools, Tally Prime, Web Design, or Python. We offer flexible batch options: Morning (9:00 AM - 12:00 PM), Afternoon (1:00 PM - 4:00 PM), Evening (5:00 PM - 8:00 PM), as well as Weekend Special batches for working professionals.',
+    a: 'We offer flexible tracks: Academic Year & Semester Batches matching school/college schedules, as well as 3 to 6-month intensive modular tracks in Artificial Intelligence and Data Science. Batch timings include Morning (9:00 AM - 12:00 PM), Afternoon (1:00 PM - 4:00 PM), Evening After-School/College (5:00 PM - 8:00 PM), and Weekend Special batches.',
   },
   {
-    q: 'Will I receive an official certificate after completing the training?',
-    a: 'Yes. Upon successfully completing your practical lab training, assignments, and practical course assessments, you will receive an official, verified Certificate of Completion from AIM COMPUTER ACADEMY that can be added to your resume and LinkedIn profile.',
+    q: 'Will every student get an individual computer workstation in the lab?',
+    a: 'Absolutely. We follow a strict 1:1 computer-to-student policy in our air-conditioned computer labs. Every student codes and runs programs on their dedicated computer under continuous faculty supervision.',
   },
   {
-    q: 'What if I miss a lecture or practical lab session?',
-    a: 'We understand that emergencies or college exams occur. With our small batch structure, you can easily schedule a backup practical session with your faculty or attend doubt-clearing hours at no additional charge.',
-  },
-  {
-    q: 'Can I pay my course fees in monthly installments?',
-    a: 'Yes, we provide flexible, interest-free monthly installment facilities for our multi-month certificate programs to ensure quality education remains accessible to all students and families.',
+    q: 'How do you prepare school students for board practical and theory exams?',
+    a: 'Our board exam training includes solving the past 10 years of board question papers, specimen paper analyses, weekly timed mock tests, and complete guidance for maintaining 100-mark practical lab record files and project documentation.',
   },
   {
     q: 'How does the Free Demo Class work?',
-    a: 'The free demo class gives you full access to a live practical session. You will be assigned a computer in our lab, experience how our instructor teaches, review the complete syllabus, and discuss your career goals before paying any fee or committing to admission.',
+    a: 'The free demo class gives the student full access to an actual lab session. You will be assigned a computer, experience our teaching method firsthand, review the course syllabus, and discuss your board or semester exam goals before taking admission.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function FAQ() {
         <SectionHeading
           badge="Frequently Asked Questions"
           title="Everything You Need to Know Before Joining"
-          subtitle="Clear answers to common questions about admissions, lab facilities, certifications, and timings."
+          subtitle="Clear answers to common questions about admissions, board syllabi, university CS batches, and lab timings."
         />
 
         <div className="space-y-4">

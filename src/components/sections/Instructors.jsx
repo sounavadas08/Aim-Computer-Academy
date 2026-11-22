@@ -4,28 +4,28 @@ import SectionHeading from '../common/SectionHeading';
 
 const INSTRUCTORS = [
   {
-    name: 'Lead Senior Faculty',
-    designation: 'Head of IT & Software Training',
-    experience: '10+ Years Industry & Teaching Experience',
-    qualification: 'MCA / B.Tech (Computer Science)',
-    specialties: ['Web Technologies', 'Python Programming', 'Database Systems'],
-    initials: 'SF',
+    name: 'Senior Academic Faculty',
+    designation: 'Head of Computer Science & College Batches',
+    experience: '12+ Years University & College Teaching Experience',
+    qualification: 'M.Tech / MCA (Computer Science)',
+    specialties: ['B.Sc / B.Tech / BCA Labs', 'Data Structures (DSA)', 'Advanced Java & C++'],
+    initials: 'CS',
   },
   {
-    name: 'Senior Accounts Specialist',
-    designation: 'Tally & Financial Accounting Mentor',
-    experience: '8+ Years Practical Accounting Experience',
-    qualification: 'M.Com, Certified Tally Professional',
-    specialties: ['Tally Prime', 'GST Filing', 'Corporate MIS Reporting'],
-    initials: 'AS',
+    name: 'AI & Data Science Specialist',
+    designation: 'Mentor for AI, Python & Machine Learning',
+    experience: '8+ Years Industry & Academic Training Experience',
+    qualification: 'M.Sc (Data Science) / B.Tech CSE',
+    specialties: ['Artificial Intelligence', 'Data Science & Pandas', 'School AI Projects (CBSE/ICSE)'],
+    initials: 'AI',
   },
   {
-    name: 'Office Tools & Design Faculty',
-    designation: 'Corporate Productivity & Creative Trainer',
-    experience: '6+ Years Training Students & Working Professionals',
-    qualification: 'BCA, Adobe Certified Associate',
-    specialties: ['Advanced MS Excel', 'Graphic Design', 'Office Automation'],
-    initials: 'DT',
+    name: 'Senior Board Exam Mentor',
+    designation: 'Specialist for ICSE, ISC, CBSE & WB Board',
+    experience: '10+ Years School Board Mentorship Experience',
+    qualification: 'BCA, MCA, School Board Exam Specialist',
+    specialties: ['ICSE/ISC BlueJ Java', 'CBSE Python & MySQL', 'WB Board Modern Computer Applications'],
+    initials: 'BM',
   },
 ];
 
@@ -35,8 +35,8 @@ export default function Instructors() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Expert Mentorship"
-          title="Learn from Dedicated, Patient Faculty"
-          subtitle="Our instructors combine industry experience with supportive teaching methods, ensuring every trainee gets personal attention."
+          title="Learn from Dedicated, Experienced CS Faculty"
+          subtitle="Our instructors combine academic curriculum expertise with patient, lab-first mentoring, ensuring every student masters practical programming."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -91,7 +91,7 @@ export default function Instructors() {
 
               <div className="mt-6 pt-4 border-t border-[#E8D8C3]/50 text-center">
                 <span className="text-[11px] text-[#6B4E3D] italic">
-                  [Faculty profiles updated for upcoming batch]
+                  [Faculty profiles updated for upcoming academic batches]
                 </span>
               </div>
             </div>

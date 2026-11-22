@@ -246,9 +246,9 @@ A task is only marked **Done** when all of the following conditions are verified
   - *Status*: Done
 
 - [x] **TASK-2.4**: Section 4 — Courses
-  - *Description*: Interactive course cards with duration, learning mode (Online/Offline/Hybrid), key skill badges, batch timing notes, and direct "Enquire" buttons.
-  - *Files Affected*: `src/components/sections/Courses.jsx`
-  - *Acceptance Criteria*: Clean grid card layout; each card's "Enquire" button triggers demo modal with course pre-selected; placeholders explicitly marked.
+  - *Description*: Interactive course cards with duration, learning mode, key skill badges, batch timing notes, direct "Enquire" buttons, and category filter tabs. Updated with user-specified curriculum: Artificial Intelligence (AI) for Class 6–10 (CBSE Code 417, ICSE, WB Board), Data Science & Python Analytics, ICSE & ISC Java/BlueJ, CBSE Computer Science & IT, West Bengal Board Computer Applications, and Graduation batches for B.Sc, B.Tech & BCA (CS Major).
+  - *Files Affected*: `src/components/sections/Courses.jsx`, `src/components/sections/Hero.jsx`, `src/components/common/EnquiryModal.jsx`, `src/components/layout/Footer.jsx`
+  - *Acceptance Criteria*: Clean grid card layout; multi-category filter tabs (All, Class 6–10, CBSE/ICSE/ISC, WB Board, B.Sc/B.Tech/BCA, AI & Data Science); each card's "Enquire" button triggers demo modal with course pre-selected; zero hardcoded hex colors.
   - *Status*: Done
 
 - [x] **TASK-2.5**: Section 5 — Why Choose Us

@@ -5,13 +5,16 @@ import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import Button from './Button';
 
 export const COURSES_LIST = [
-  'Basic Computer & IT Fundamentals',
-  'Advanced MS Office & Excel Mastery',
-  'Web Design & Full Stack Development',
-  'Python Programming & Data Analytics',
-  'Professional Computerized Accounting (Tally + GST)',
-  'Graphic Design & Digital Media',
-  'Custom Career Guidance / Undecided',
+  'Artificial Intelligence (AI) - Class 6-10 (CBSE/ICSE/WB Board)',
+  'Data Science & Python Analytics',
+  'ICSE Computer Applications (Class 9-10 Java/BlueJ)',
+  'ISC Computer Science (Class 11-12 Java & Theory)',
+  'CBSE Computer Science & IT (Class 6-10 & 11-12)',
+  'WB Board Computer Applications (Class 6-10 & HS)',
+  'Graduation Batch: BCA (Computer Science Major)',
+  'Graduation Batch: B.Tech CSE / IT (Lab & Semester)',
+  'Graduation Batch: B.Sc Computer Science (Hons)',
+  'Other Academic & Board Exam Consultation',
 ];
 
 export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }) {
@@ -76,10 +79,10 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
       `Hi AIM Computer Academy, I would like to book a free demo class & enquiry:%0A%0A` +
         `👤 *Name:* ${formData.name.trim()}%0A` +
         `📱 *Phone:* ${formData.phone.trim()}%0A` +
-        `📚 *Course:* ${formData.course}%0A` +
+        `📚 *Course/Batch:* ${formData.course}%0A` +
         `⏰ *Preferred Time:* ${formData.timing}%0A` +
-        (formData.message.trim() ? `💬 *Message:* ${formData.message.trim()}%0A` : '') +
-        `%0APlease let me know the upcoming batch schedule.`
+        (formData.message.trim() ? `💬 *Student Class/Board Details:* ${formData.message.trim()}%0A` : '') +
+        `%0APlease share upcoming batch timings and demo class schedule.`
     );
 
     const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${waText}`;
@@ -136,10 +139,10 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
             <h3 className="text-2xl font-black text-[#3B2418] mb-2">Enquiry Sent via WhatsApp!</h3>
             <p className="text-[#6B4E3D] text-sm md:text-base mb-6 leading-relaxed">
               Thank you, <strong>{formData.name}</strong>. We have opened WhatsApp with your details.
-              Our academic counsellor will connect with you shortly to confirm your free demo seat.
+              Our faculty coordinator will connect with you shortly to confirm your free demo class seat.
             </p>
             <div className="p-4 bg-[#F3E7D3] rounded-2xl mb-6 text-left text-xs text-[#6B4E3D] space-y-1 border border-[#E8D8C3]">
-              <div><strong>Course:</strong> {formData.course}</div>
+              <div><strong>Course / Batch:</strong> {formData.course}</div>
               <div><strong>Preferred Timing:</strong> {formData.timing}</div>
               <div><strong>Registered Phone:</strong> {formData.phone}</div>
             </div>
@@ -160,13 +163,13 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
           <div>
             <div className="mb-6">
               <span className="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F3E7D3] text-[#5C3D2E] border border-[#E8D8C3] mb-2">
-                Free Demo Class
+                Free Demo Class & Counselling
               </span>
               <h3 id="modal-title" className="text-2xl md:text-3xl font-black text-[#3B2418] tracking-tight">
                 Book Your Free Demo Seat
               </h3>
               <p className="text-[#6B4E3D] text-sm mt-1.5">
-                Experience our hands-on training, meet our faculty, and inspect our computer labs with zero commitment.
+                Attend a hands-on session, inspect our computer lab workstations, and consult our faculty before taking admission.
               </p>
             </div>
 
@@ -174,12 +177,12 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
               {/* Full Name */}
               <div>
                 <label className="block text-xs font-bold text-[#3B2418] uppercase tracking-wider mb-1.5">
-                  Full Name <span className="text-[#9B2C2C]">*</span>
+                  Student / Parent Full Name <span className="text-[#9B2C2C]">*</span>
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Rahul Sharma"
+                  placeholder="e.g. Sounava Das"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className={`w-full px-4 py-3 rounded-xl bg-white border text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors ${
@@ -216,7 +219,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
               {/* Course of Interest */}
               <div>
                 <label className="block text-xs font-bold text-[#3B2418] uppercase tracking-wider mb-1.5">
-                  Course of Interest
+                  Course / Academic Batch of Interest
                 </label>
                 <select
                   value={formData.course}
@@ -243,19 +246,19 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                 >
                   <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
                   <option value="Afternoon (1:00 PM - 4:00 PM)">Afternoon (1:00 PM - 4:00 PM)</option>
-                  <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
-                  <option value="Weekend Special (Sat & Sun)">Weekend Special (Sat & Sun)</option>
+                  <option value="Evening After-School / College (5:00 PM - 8:00 PM)">Evening After-School / College (5:00 PM - 8:00 PM)</option>
+                  <option value="Weekend Special (Saturday & Sunday)">Weekend Special (Saturday & Sunday)</option>
                 </select>
               </div>
 
               {/* Optional Message */}
               <div>
                 <label className="block text-xs font-bold text-[#3B2418] uppercase tracking-wider mb-1.5">
-                  Any Questions or Specific Requirements? (Optional)
+                  Class / School Board / College Semester Details (Optional)
                 </label>
                 <textarea
                   rows={2}
-                  placeholder="e.g. Do you provide evening weekend batches?"
+                  placeholder="e.g. Class 9 ICSE student looking for BlueJ coaching, or BCA 2nd Sem"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#E8D8C3] text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors resize-none"
@@ -275,7 +278,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                   Confirm & Send via WhatsApp
                 </Button>
                 <p className="text-center text-[11px] text-[#6B4E3D] mt-2">
-                  🔒 We respect your privacy. No spam. You will be connected directly to our counsellor.
+                  🔒 We respect your privacy. No spam. You will be connected directly with our faculty coordinator.
                 </p>
               </div>
             </form>
