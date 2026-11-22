@@ -67,7 +67,7 @@ const HERO_CARDS = [
   },
 ];
 
-export default function Hero({ onOpenDemoModal }) {
+export default function Hero({ onOpenEnquiryModal }) {
   const [activeCard, setActiveCard] = useState('data-science');
 
   return (
@@ -125,12 +125,12 @@ export default function Hero({ onOpenDemoModal }) {
             <Button
               variant="primary"
               size="lg"
-              onClick={() => onOpenDemoModal()}
+              onClick={() => onOpenEnquiryModal()}
               icon={ArrowRight}
               iconPosition="right"
               className="w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all"
             >
-              Book a Free Demo Class
+              Enquire Now
             </Button>
 
             <a
@@ -220,7 +220,7 @@ export default function Hero({ onOpenDemoModal }) {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          onOpenDemoModal(card.title);
+                          onOpenEnquiryModal(card.title);
                         }}
                         className="text-xs font-bold text-[#B07A4F] hover:text-[#3B2418] flex items-center gap-1 group"
                       >

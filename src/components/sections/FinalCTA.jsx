@@ -3,7 +3,7 @@ import { ArrowRight, MessageSquare, Phone, CheckCircle2, Sparkles } from 'lucide
 import { siteConfig } from '../../config/site';
 import Button from '../common/Button';
 
-export default function FinalCTA({ onOpenDemoModal }) {
+export default function FinalCTA({ onOpenEnquiryModal }) {
   return (
     <section className="py-20 md:py-28 bg-[#FAF3E8]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,11 +19,11 @@ export default function FinalCTA({ onOpenDemoModal }) {
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.15]">
               Don't Just Learn Theory. <br className="hidden sm:inline" />
-              Gain Practical Computer Mastery.
+              Gain Practical Computer Science Mastery.
             </h2>
 
             <p className="text-[#DFCEB7] text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Join hundreds of successful students and working professionals trained at {siteConfig.name}. Book your complimentary demo class, meet your mentor, and inspect our computer labs.
+              Join hundreds of successful school students and university undergraduates trained at {siteConfig.name}. Speak with our faculty coordinator and reserve your dedicated lab workstation.
             </p>
 
             {/* Main Action Buttons */}
@@ -31,12 +31,12 @@ export default function FinalCTA({ onOpenDemoModal }) {
               <Button
                 variant="caramel"
                 size="lg"
-                onClick={() => onOpenDemoModal()}
+                onClick={() => onOpenEnquiryModal()}
                 icon={ArrowRight}
                 iconPosition="right"
                 className="w-full sm:w-auto shadow-2xl hover:scale-105"
               >
-                Book a Free Demo Class
+                Enquire for Admissions
               </Button>
 
               <a
@@ -61,13 +61,13 @@ export default function FinalCTA({ onOpenDemoModal }) {
             {/* Reassurance Checks */}
             <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-[#DFCEB7] font-medium border-t border-[#5C3D2E]/80 mt-8">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> Zero Fee for Demo Class
+                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> 100% Practical Lab Workstation
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> Dedicated Computer Terminal
+                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> Small Batches & Personal Doubt Clearing
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> No Prior Experience Needed
+                <CheckCircle2 className="w-4 h-4 text-[#B07A4F]" /> Verified Certificate & Board Exam Prep
               </span>
             </div>
           </div>

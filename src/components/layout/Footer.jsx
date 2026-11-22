@@ -4,7 +4,7 @@ import { InstagramIcon } from '../common/Icons';
 import Logo from '../common/Logo';
 import { siteConfig } from '../../config/site';
 
-export default function Footer({ onOpenDemoModal, onOpenLegalModal }) {
+export default function Footer({ onOpenEnquiryModal, onOpenLegalModal }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -59,10 +59,10 @@ export default function Footer({ onOpenDemoModal, onOpenLegalModal }) {
               ))}
               <li>
                 <button
-                  onClick={() => onOpenDemoModal()}
+                  onClick={() => onOpenEnquiryModal()}
                   className="text-left font-semibold text-[#B07A4F] hover:text-[#FAF3E8] transition-colors"
                 >
-                  Book Free Demo →
+                  Admission Enquiry →
                 </button>
               </li>
             </ul>

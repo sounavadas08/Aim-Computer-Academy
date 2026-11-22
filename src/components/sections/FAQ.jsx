@@ -24,8 +24,8 @@ const FAQS = [
     a: 'Our board exam training includes solving the past 10 years of board question papers, specimen paper analyses, weekly timed mock tests, and complete guidance for maintaining 100-mark practical lab record files and project documentation.',
   },
   {
-    q: 'How does the Free Demo Class work?',
-    a: 'The free demo class gives the student full access to an actual lab session. You will be assigned a computer, experience our teaching method firsthand, review the course syllabus, and discuss your board or semester exam goals before taking admission.',
+    q: 'How do I take admission or enroll in an upcoming batch?',
+    a: 'You can submit an online enquiry, chat directly with us on WhatsApp, or call our admission desk. Our academic coordinator will evaluate your syllabus requirements, confirm seat availability in the appropriate batch, and guide you through the straightforward enrollment process.',
   },
 ];
 

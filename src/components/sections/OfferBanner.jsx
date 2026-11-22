@@ -2,7 +2,7 @@ import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import Button from '../common/Button';
 
-export default function OfferBanner({ onOpenDemoModal, hasOffer = true }) {
+export default function OfferBanner({ onOpenEnquiryModal, hasOffer = true }) {
   if (!hasOffer) return null;
 
   return (
@@ -13,19 +13,19 @@ export default function OfferBanner({ onOpenDemoModal, hasOffer = true }) {
             <Sparkles className="w-4 h-4" />
           </span>
           <p className="text-xs sm:text-sm font-semibold">
-            <strong className="text-[#DFBFA1] font-bold">New Batch Admission Offer:</strong> Free Study Material & 1-on-1 Career Counselling with every Demo Class booking!
+            <strong className="text-[#DFBFA1] font-bold">New Batch Admission Offer:</strong> Free Study Material & 1-on-1 Academic Mentoring for all new enrolments!
           </p>
         </div>
 
         <Button
           variant="caramel"
           size="sm"
-          onClick={() => onOpenDemoModal()}
+          onClick={() => onOpenEnquiryModal()}
           className="!py-1.5 !px-4 !text-xs shrink-0 shadow-sm"
           icon={ArrowRight}
           iconPosition="right"
         >
-          Reserve Demo Seat
+          Enquire for Offer
         </Button>
       </div>
     </section>

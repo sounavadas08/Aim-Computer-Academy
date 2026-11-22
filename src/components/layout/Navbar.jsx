@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MessageSquare, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare } from 'lucide-react';
 import Logo from '../common/Logo';
 import Button from '../common/Button';
 import { siteConfig } from '../../config/site';
 import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 
-export default function Navbar({ onOpenDemoModal }) {
+export default function Navbar({ onOpenEnquiryModal }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -58,12 +58,12 @@ export default function Navbar({ onOpenDemoModal }) {
             variant="primary"
             size="sm"
             onClick={() => {
-              trackEvent(AnalyticsEvents.DEMO_MODAL_OPEN, { location: 'navbar_desktop' });
-              onOpenDemoModal();
+              trackEvent(AnalyticsEvents.ENQUIRY_MODAL_OPEN, { location: 'navbar_desktop' });
+              onOpenEnquiryModal();
             }}
             className="shadow-sm"
           >
-            Book Free Demo
+            Enquire Now
           </Button>
         </div>
 
@@ -72,10 +72,10 @@ export default function Navbar({ onOpenDemoModal }) {
           <Button
             variant="primary"
             size="sm"
-            onClick={() => onOpenDemoModal()}
+            onClick={() => onOpenEnquiryModal()}
             className="!px-3 !py-1.5 !text-xs"
           >
-            Demo
+            Enquire
           </Button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -111,10 +111,10 @@ export default function Navbar({ onOpenDemoModal }) {
               className="w-full justify-center"
               onClick={() => {
                 setMobileMenuOpen(false);
-                onOpenDemoModal();
+                onOpenEnquiryModal();
               }}
             >
-              Book Free Demo Class
+              Submit Course Enquiry
             </Button>
             
             <a

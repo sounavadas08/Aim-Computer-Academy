@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, Monitor, BookOpen, CheckCircle, ArrowRight, Sparkles, GraduationCap } from 'lucide-react';
+import { Clock, Monitor, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
@@ -129,7 +129,7 @@ const FILTER_TABS = [
   'AI & Data Science',
 ];
 
-export default function Courses({ onOpenDemoModal }) {
+export default function Courses({ onOpenEnquiryModal }) {
   const [filter, setFilter] = useState('All');
 
   const filteredCourses =
@@ -238,7 +238,7 @@ export default function Courses({ onOpenDemoModal }) {
                 <Button
                   variant="primary"
                   size="sm"
-                  onClick={() => onOpenDemoModal(course.title)}
+                  onClick={() => onOpenEnquiryModal(course.title)}
                   icon={ArrowRight}
                   iconPosition="right"
                 >

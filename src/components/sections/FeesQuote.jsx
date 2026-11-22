@@ -1,65 +1,63 @@
 import React from 'react';
-import { HelpCircle, CheckCircle, Calculator, ArrowRight, ShieldCheck } from 'lucide-react';
+import { HelpCircle, Calculator, Check, ArrowRight } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
-export default function FeesQuote({ onOpenDemoModal }) {
+export default function FeesQuote({ onOpenEnquiryModal }) {
   return (
     <section id="fees" className="py-20 md:py-28 bg-[#FAF3E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Affordable & Transparent"
-          title="Transparent Fee Structures with Zero Hidden Charges"
-          subtitle="Quality computer education made accessible for all students, job-seekers, and working professionals."
+          badge="Clear Investment"
+          title="Affordable, Transparent Course Fee Structure"
+          subtitle="Quality computer science training shouldn't be complicated or expensive. We offer budget-friendly fees with flexible monthly installments."
         />
 
-        <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 bg-[#F3E7D3]/80 border border-[#E8D8C3] shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[#5C3D2E] text-[#FAF3E8]">
-                Fee Transparency
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-[#3B2418] leading-tight">
-                No Guesswork. Flexible Installment Options.
-              </h3>
-              <p className="text-sm text-[#6B4E3D] leading-relaxed">
-                Because course durations range from 1 to 6 months depending on your goals, we provide customized fee estimates that fit your exact module needs without forcing unnecessary packages.
-              </p>
-
-              <div className="space-y-2 pt-2">
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#3B2418]">
-                  <CheckCircle className="w-4 h-4 text-[#2E6B47]" /> All lab computer usage charges included
-                </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#3B2418]">
-                  <CheckCircle className="w-4 h-4 text-[#2E6B47]" /> Official course certificate included
-                </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#3B2418]">
-                  <CheckCircle className="w-4 h-4 text-[#2E6B47]" /> Easy monthly installment plans available
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 bg-[#F3E7D3]/60 border border-[#E8D8C3] shadow-md flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-4 max-w-lg">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF3E8] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E]">
+              <Calculator className="w-3.5 h-3.5 text-[#B07A4F]" />
+              <span>Personalized Fee Quote</span>
             </div>
 
-            <div className="rounded-2xl p-6 bg-[#FAF3E8] border border-[#E8D8C3] shadow-inner text-center space-y-4">
-              <div className="w-12 h-12 rounded-full bg-[#B07A4F]/10 text-[#B07A4F] flex items-center justify-center mx-auto">
-                <Calculator className="w-6 h-6" />
-              </div>
-              <h4 className="font-black text-xl text-[#3B2418]">
-                Request an Instant Fee Quote
-              </h4>
-              <p className="text-xs text-[#6B4E3D] leading-relaxed">
-                Select your desired course and timing to receive an exact fee breakdown, discount options, and batch schedule.
-              </p>
-              <Button
-                variant="primary"
-                size="md"
-                onClick={() => onOpenDemoModal()}
-                icon={ArrowRight}
-                iconPosition="right"
-                className="w-full justify-center shadow-md"
-              >
-                Get Exact Fee Quote
-              </Button>
-            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#3B2418]">
+              Get Instant Fee Details for Your Chosen Batch
+            </h3>
+
+            <p className="text-sm text-[#6B4E3D] leading-relaxed">
+              Our fee structures are tailored by course duration, school board requirements (CBSE, ICSE, WB Board), or university semester tracks (B.Sc, B.Tech, BCA).
+            </p>
+
+            <ul className="space-y-2 text-xs sm:text-sm text-[#3B2418] font-medium pt-2">
+              <li className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#2E6B47] shrink-0" />
+                <span>Zero hidden charges or examination surcharges</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#2E6B47] shrink-0" />
+                <span>Easy monthly installment (EMI) facility available</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-[#2E6B47] shrink-0" />
+                <span>Includes complete practical lab workstation access</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="w-full md:w-auto shrink-0 flex flex-col items-center gap-3">
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() => onOpenEnquiryModal()}
+              icon={ArrowRight}
+              iconPosition="right"
+              className="w-full md:w-auto shadow-xl"
+            >
+              Get a Transparent Fee Quote
+            </Button>
+            <span className="text-[11px] text-[#6B4E3D] font-medium text-center">
+              Direct quote via WhatsApp in minutes
+            </span>
           </div>
         </div>
       </div>

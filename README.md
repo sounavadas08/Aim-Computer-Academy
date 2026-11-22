@@ -41,11 +41,11 @@ The visual theme is warm, premium, friendly, and trustworthy. All color tokens, 
 ## 📑 17 Landing Page Sections
 
 1. **Navbar**: Sticky blur-on-scroll header with official logo, phone dialer, navigation links, and accessible mobile drawer.
-2. **Hero**: Outcome-driven headline (`Master Practical Computer Skills. Build a Career That Thrives`), CTAs (Demo, WhatsApp, Phone), and an **interactive fanned-out 5-card course deck** inspired by the Swiss reference UI.
+2. **Hero**: Outcome-driven headline (`Master Practical Computer Science. From School Boards to College Degrees`), CTAs (Enquire Now, WhatsApp, Phone), and an **interactive fanned-out 5-card course deck** inspired by the Swiss reference UI.
 3. **Trust Strip**: Animated milestone counters for 2500+ students, 8+ years, 15+ courses, and 100% lab terminal focus.
 4. **Courses**: School & University curriculum catalog with category filters (Artificial Intelligence for Class 6–10, Data Science & Python Analytics, ICSE & ISC Java/BlueJ, CBSE Computer Science & IT, WB Board Computer Applications, and Graduation batches for B.Sc, B.Tech & BCA Computer Science majors) with course enquiry triggers.
 5. **Why Choose Us**: 6 institutional pillars (hands-on practice, small batches, personal coaching, recognized certification, career prep, doubt clearing).
-6. **How It Works**: 4-step progressive stepper from demo booking to certification.
+6. **How It Works**: 4-step progressive stepper from initial course enquiry to certification and mastery.
 7. **Instructors**: Faculty credentials, experience, and domain specialties.
 8. **Results & Achievements**: Real-world project submissions and career milestone highlights.
 9. **Testimonials**: Interactive review carousel with student quotes, roles, and 5-star ratings.
@@ -54,7 +54,7 @@ The visual theme is warm, premium, friendly, and trustworthy. All color tokens, 
 12. **Gallery**: Modern air-conditioned computer lab and classroom environment highlights.
 13. **FAQ**: Accessible accordion covering common admissions, certifications, and schedule queries.
 14. **Offer Banner**: Admission offer banner with direct reservation action.
-15. **Final CTA**: High-impact closing callout to book demo seats.
+15. **Final CTA**: High-impact closing callout to enquire for batch admissions.
 16. **Contact & Location**: Campus address placeholder, interactive map placeholder, hours, and direct links.
 17. **Footer**: Logo, mission, navigation links, contact info, Instagram link, and legal policy modals.
 
@@ -64,8 +64,8 @@ The visual theme is warm, premium, friendly, and trustworthy. All color tokens, 
 
 - **Floating WhatsApp Pill**: Sticky bottom-right button opening direct WhatsApp chat with pre-filled enquiry.
 - **Mobile Sticky Call Button**: One-tap phone dialer for immediate mobile inquiries.
-- **Validated Demo Booking Modal**: Complete enquiry modal validating full name (min 2 chars) and 10-digit Indian mobile number with direct WhatsApp dispatch.
-- **Event Analytics Tracker**: Built-in [`src/utils/analytics.js`](src/utils/analytics.js) tracking WhatsApp clicks, phone calls, demo bookings, and brochure downloads with GTM / GA4 `dataLayer` integration.
+- **Validated Admissions & Enquiry Modal**: Complete enquiry modal validating full name (min 2 chars) and 10-digit Indian mobile number with direct WhatsApp dispatch.
+- **Event Analytics Tracker**: Built-in [`src/utils/analytics.js`](src/utils/analytics.js) tracking WhatsApp clicks, phone calls, course enquiries, and brochure downloads with GTM / GA4 `dataLayer` integration.
 
 ---
 

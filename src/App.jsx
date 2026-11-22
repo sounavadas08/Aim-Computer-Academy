@@ -23,14 +23,14 @@ import FinalCTA from './components/sections/FinalCTA';
 import ContactLocation from './components/sections/ContactLocation';
 
 export default function App() {
-  const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [preselectedCourse, setPreselectedCourse] = useState('');
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalModalType, setLegalModalType] = useState('privacy');
 
-  const handleOpenDemoModal = (courseName = '') => {
+  const handleOpenEnquiryModal = (courseName = '') => {
     setPreselectedCourse(courseName);
-    setDemoModalOpen(true);
+    setEnquiryModalOpen(true);
   };
 
   const handleOpenLegalModal = (type = 'privacy') => {
@@ -41,35 +41,35 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF3E8] text-[#3B2418]">
       {/* 1. Navbar (Sticky with blur on scroll, logo, links, CTA) */}
-      <Navbar onOpenDemoModal={handleOpenDemoModal} />
+      <Navbar onOpenEnquiryModal={handleOpenEnquiryModal} />
 
       <main className="flex-1">
         {/* 2. Hero: outcome headline, fanned-out interactive course deck */}
-        <Hero onOpenDemoModal={handleOpenDemoModal} />
+        <Hero onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 3. Trust Strip: animated counters for students, years, courses */}
         <TrustStrip />
 
         {/* 4. Courses: interactive course catalog with enquiry buttons */}
-        <Courses onOpenDemoModal={handleOpenDemoModal} />
+        <Courses onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 5. Why Choose Us: practical training, small batches, personal attention */}
         <WhyChooseUs />
 
         {/* 6. How It Works: 4-step progressive learning stepper */}
-        <HowItWorks onOpenDemoModal={handleOpenDemoModal} />
+        <HowItWorks onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 7. Instructors: faculty credentials & experience */}
         <Instructors />
 
         {/* 8. Results / Student Achievements & Certificates */}
-        <Results onOpenDemoModal={handleOpenDemoModal} />
+        <Results onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 9. Testimonials: student reviews carousel */}
         <Testimonials />
 
         {/* 10. Fees / Fee Quote request path */}
-        <FeesQuote onOpenDemoModal={handleOpenDemoModal} />
+        <FeesQuote onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 11. Free Resources Lead Magnet: syllabus download */}
         <LeadMagnet />
@@ -81,18 +81,18 @@ export default function App() {
         <FAQ />
 
         {/* 14. Offer Banner (conditional countdown & admission offer) */}
-        <OfferBanner onOpenDemoModal={handleOpenDemoModal} hasOffer={true} />
+        <OfferBanner onOpenEnquiryModal={handleOpenEnquiryModal} hasOffer={true} />
 
-        {/* 15. Final CTA: high-impact demo class invitation */}
-        <FinalCTA onOpenDemoModal={handleOpenDemoModal} />
+        {/* 15. Final CTA: high-impact admission enquiry invitation */}
+        <FinalCTA onOpenEnquiryModal={handleOpenEnquiryModal} />
 
         {/* 16. Contact & Location: address, map placeholder, hours, links */}
-        <ContactLocation onOpenDemoModal={handleOpenDemoModal} />
+        <ContactLocation onOpenEnquiryModal={handleOpenEnquiryModal} />
       </main>
 
       {/* 17. Footer: links, contact info, Instagram, legal modals */}
       <Footer
-        onOpenDemoModal={handleOpenDemoModal}
+        onOpenEnquiryModal={handleOpenEnquiryModal}
         onOpenLegalModal={handleOpenLegalModal}
       />
 
@@ -101,8 +101,8 @@ export default function App() {
 
       {/* Modals */}
       <EnquiryModal
-        isOpen={demoModalOpen}
-        onClose={() => setDemoModalOpen(false)}
+        isOpen={enquiryModalOpen}
+        onClose={() => setEnquiryModalOpen(false)}
         preselectedCourse={preselectedCourse}
       />
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Briefcase, CheckCircle2, TrendingUp, Sparkles } from 'lucide-react';
+import { Award, Briefcase, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
@@ -14,27 +14,27 @@ const HIGHLIGHTS = [
   {
     title: 'Portfolio & Live Project Submissions',
     description:
-      'Students build real portfolios—from complex Excel dashboard templates to live websites and GST accounting books—to showcase directly to employers.',
+      'Students build real portfolios—from Python algorithms and AI mini-models to university project code—to showcase directly to colleges and recruiters.',
     badge: 'Real Work',
     icon: Briefcase,
   },
   {
-    title: 'Job Interview & Practical Test Readiness',
+    title: 'Board Exam & University Lab Readiness',
     description:
-      'We coach trainees through computerized typing speed tests, accounting assessment simulations, and technical viva interviews.',
-    badge: 'Career Ready',
+      'We coach students through practical lab tests, board specimen questions, BlueJ/Python coding assignments, and university viva preparation.',
+    badge: 'Exam Ready',
     icon: TrendingUp,
   },
 ];
 
-export default function Results({ onOpenDemoModal }) {
+export default function Results({ onOpenEnquiryModal }) {
   return (
     <section id="results" className="py-20 md:py-28 bg-[#FAF3E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Tangible Outcomes"
-          title="Skills That Open Real Career Opportunities"
-          subtitle="Our training is measured by the practical confidence our graduates bring to their jobs, colleges, and freelance projects."
+          title="Skills That Open Real Academic & Career Opportunities"
+          subtitle="Our training is measured by the high board marks and university semester grades our students achieve."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
@@ -73,20 +73,22 @@ export default function Results({ onOpenDemoModal }) {
               <Sparkles className="w-3.5 h-3.5" /> Certificate of Completion
             </span>
             <h3 className="text-2xl md:text-3xl font-black mb-2">
-              Ready to Add a Certified Computer Credential to Your Resume?
+              Ready to Master Practical Computer Science & Score Top Grades?
             </h3>
             <p className="text-[#DFCEB7] text-sm md:text-base leading-relaxed">
-              Book a free demo seat today. Experience the curriculum, meet our instructor, and start building your future.
+              Join our upcoming academic batches. Learn directly from experienced faculty with dedicated lab workstations.
             </p>
           </div>
 
           <Button
             variant="caramel"
             size="lg"
-            onClick={() => onOpenDemoModal()}
+            onClick={() => onOpenEnquiryModal()}
             className="shrink-0 shadow-lg"
+            icon={ArrowRight}
+            iconPosition="right"
           >
-            Claim Your Free Demo
+            Enquire for Admission
           </Button>
         </div>
       </div>

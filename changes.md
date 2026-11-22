@@ -223,6 +223,44 @@ This file maintains a strict chronological record of every change, addition, mod
 
 ---
 
+### [2026-11-23 02:26] CHANGE-010
+- Task ID: TASK-2.1, TASK-2.2, TASK-2.6, TASK-2.8, TASK-2.13, TASK-2.14, TASK-2.15, TASK-3.4
+- Type: Refactor / Content / UX
+- Files affected:
+  - `src/App.jsx`
+  - `src/components/layout/Navbar.jsx`
+  - `src/components/layout/Footer.jsx`
+  - `src/components/sections/Hero.jsx`
+  - `src/components/sections/Courses.jsx`
+  - `src/components/sections/HowItWorks.jsx`
+  - `src/components/sections/Results.jsx`
+  - `src/components/sections/FeesQuote.jsx`
+  - `src/components/sections/OfferBanner.jsx`
+  - `src/components/sections/FinalCTA.jsx`
+  - `src/components/sections/ContactLocation.jsx`
+  - `src/components/sections/FAQ.jsx`
+  - `src/components/common/EnquiryModal.jsx`
+  - `src/components/common/LegalModal.jsx`
+  - `src/utils/analytics.js`
+  - `README.md`
+  - `task.md`
+  - `changes.md`
+- What changed:
+  1. Completely removed all demo class sections, CTAs, headings, questions, and references across the codebase:
+     - Replaced FAQ #6 with an admission and enrollment process question & answer.
+     - Refactored `HowItWorks.jsx` Step 1 from "Book a Free Demo Class" to "Submit Course Enquiry".
+     - Updated `FinalCTA.jsx` and `Results.jsx` to focus on admission enquiry, workstation reservations, and academic preparation.
+     - Changed all primary CTA buttons from "Book a Free Demo Class" / "Demo" to "Enquire Now" / "Submit Course Enquiry".
+     - Updated `EnquiryModal.jsx` to "Admission & Batch Enquiry" with tailored WhatsApp dispatch text asking for batch timings, syllabus, and fee details.
+     - Updated `OfferBanner.jsx` from demo booking promotion to admission academic mentoring offer.
+     - Updated `LegalModal.jsx` privacy policy text to refer to admission enquiries.
+     - Renamed handlers and props in `App.jsx` from demo naming to `onOpenEnquiryModal`.
+- Why: User requested removing all demo class sections and focusing on course admissions and direct academic enquiries.
+- Approved by user: Yes (user instructed "remove all demo class sections").
+- Notes / follow-ups: All links, forms, and WhatsApp actions remain 100% operational.
+
+---
+
 ## Pending Approvals
 - None (All phases 1–6 complete).
 

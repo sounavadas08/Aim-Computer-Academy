@@ -5,7 +5,7 @@ import { siteConfig } from '../../config/site';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
-export default function ContactLocation({ onOpenDemoModal }) {
+export default function ContactLocation({ onOpenEnquiryModal }) {
   return (
     <section id="contact" className="py-20 md:py-28 bg-[#F3E7D3] border-t border-[#E8D8C3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,7 +159,7 @@ export default function ContactLocation({ onOpenDemoModal }) {
               <Button
                 variant="primary"
                 size="md"
-                onClick={() => onOpenDemoModal()}
+                onClick={() => onOpenEnquiryModal()}
               >
                 Schedule an In-Person Campus Visit
               </Button>

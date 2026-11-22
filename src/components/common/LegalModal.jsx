@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ShieldCheck } from 'lucide-react';
+import { X, ShieldCheck, FileText } from 'lucide-react';
 import { siteConfig } from '../../config/site';
 
 export default function LegalModal({ isOpen, onClose, type = 'privacy' }) {
@@ -28,6 +28,7 @@ export default function LegalModal({ isOpen, onClose, type = 'privacy' }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#3B2418]/60 backdrop-blur-sm animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
+      aria-labelledby="legal-modal-title"
       onClick={onClose}
     >
       <div
@@ -42,15 +43,17 @@ export default function LegalModal({ isOpen, onClose, type = 'privacy' }) {
           <X className="w-5 h-5" />
         </button>
 
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-full bg-[#B07A4F]/10 text-[#B07A4F] flex items-center justify-center">
-            <ShieldCheck className="w-6 h-6" />
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-10 h-10 rounded-xl bg-[#5C3D2E] text-[#FAF3E8] flex items-center justify-center">
+            {isPrivacy ? <ShieldCheck className="w-5 h-5 text-[#B07A4F]" /> : <FileText className="w-5 h-5 text-[#B07A4F]" />}
           </div>
           <div>
-            <h3 className="text-2xl font-black text-[#3B2418]">
-              {isPrivacy ? 'Privacy Policy' : 'Terms & Conditions'}
+            <h3 id="legal-modal-title" className="text-xl md:text-2xl font-black text-[#3B2418]">
+              {isPrivacy ? 'Privacy Policy' : 'Terms of Service'}
             </h3>
-            <p className="text-xs text-[#6B4E3D]">{siteConfig.name}</p>
+            <p className="text-xs text-[#6B4E3D]">
+              Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+            </p>
           </div>
         </div>
 
@@ -62,15 +65,15 @@ export default function LegalModal({ isOpen, onClose, type = 'privacy' }) {
               </p>
               <h4 className="font-bold text-[#3B2418] text-sm">1. Information We Collect</h4>
               <p>
-                When you submit an enquiry form, request a demo class, or contact us via WhatsApp or phone, we collect details such as your Name, Phone Number, Course of Interest, and Preferred Batch Timings.
+                When you submit an enquiry form, apply for course details, or contact us via WhatsApp or phone, we collect details such as your Name, Phone Number, Course of Interest, and Preferred Batch Timings.
               </p>
               <h4 className="font-bold text-[#3B2418] text-sm">2. How We Use Your Information</h4>
               <p>
                 Your data is exclusively used to:
               </p>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Coordinate demo classes, course counselling, and batch scheduling.</li>
-                <li>Send course brochures, fee estimates, and educational updates.</li>
+                <li>Coordinate batch admissions, course counselling, and scheduling.</li>
+                <li>Send syllabus outlines, fee estimates, and educational updates.</li>
                 <li>Respond to direct queries sent via WhatsApp, phone, or email.</li>
               </ul>
               <h4 className="font-bold text-[#3B2418] text-sm">3. Data Protection</h4>
@@ -85,31 +88,26 @@ export default function LegalModal({ isOpen, onClose, type = 'privacy' }) {
           ) : (
             <>
               <p>
-                Welcome to <strong>{siteConfig.name}</strong>. By accessing our training programs or browsing this website, you agree to the following terms:
+                Welcome to <strong>{siteConfig.name}</strong>. By accessing our training facilities, website, or enrolling in our programs, you agree to the following terms:
               </p>
               <h4 className="font-bold text-[#3B2418] text-sm">1. Course Enrolment & Attendance</h4>
               <p>
-                Admission to any course is finalized following orientation and batch allocation. Students are encouraged to maintain regular practical attendance to ensure complete skill acquisition.
+                Admission to any course or batch is subject to seat availability in our computer lab. Regular lab attendance and submission of practical assignments are required to qualify for completion certificates.
               </p>
-              <h4 className="font-bold text-[#3B2418] text-sm">2. Certification Criteria</h4>
+              <h4 className="font-bold text-[#3B2418] text-sm">2. Lab Conduct & Equipment</h4>
               <p>
-                Course completion certificates are awarded upon satisfactory attendance, completion of assigned practical lab exercises, and final module assessments.
+                Students are provided dedicated workstation access during their assigned batch hours. Trainees must treat all computer hardware, monitors, and peripherals with care.
               </p>
-              <h4 className="font-bold text-[#3B2418] text-sm">3. Lab Usage & Conduct</h4>
+              <h4 className="font-bold text-[#3B2418] text-sm">3. Certification Policy</h4>
               <p>
-                All students must abide by ethical computer laboratory guidelines and respect institute equipment, fellow trainees, and faculty instructions.
+                Certificates of Completion are awarded based on satisfactory attendance, completion of syllabus projects, and internal practical assessments.
+              </p>
+              <h4 className="font-bold text-[#3B2418] text-sm">4. Fee Payment & Adjustments</h4>
+              <p>
+                Course fees must be remitted as per the agreed schedule. For batch rescheduling due to academic school/college examinations, advance notice should be submitted to the administration.
               </p>
             </>
           )}
-        </div>
-
-        <div className="mt-6 pt-4 border-t border-[#E8D8C3] flex justify-end">
-          <button
-            onClick={onClose}
-            className="px-6 py-2.5 rounded-full bg-[#5C3D2E] text-[#FAF3E8] font-semibold text-xs hover:bg-[#3B2418] transition-colors"
-          >
-            I Understand
-          </button>
         </div>
       </div>
     </div>

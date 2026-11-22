@@ -7,8 +7,8 @@
 export const AnalyticsEvents = {
   WHATSAPP_CLICK: 'whatsapp_click',
   PHONE_CLICK: 'phone_call_click',
-  DEMO_MODAL_OPEN: 'demo_modal_open',
-  DEMO_FORM_SUBMIT: 'demo_form_submit',
+  ENQUIRY_MODAL_OPEN: 'enquiry_modal_open',
+  ENQUIRY_FORM_SUBMIT: 'enquiry_form_submit',
   SYLLABUS_DOWNLOAD: 'syllabus_download_request',
   INSTAGRAM_CLICK: 'instagram_profile_click',
   COURSE_ENQUIRE_CLICK: 'course_enquire_click',

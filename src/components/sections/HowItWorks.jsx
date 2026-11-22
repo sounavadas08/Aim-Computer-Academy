@@ -1,51 +1,51 @@
 import React from 'react';
-import { CalendarCheck, UserCheck, Clock4, GraduationCap, ArrowRight } from 'lucide-react';
+import { FileText, UserCheck, Clock4, GraduationCap, ArrowRight } from 'lucide-react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
 
 const STEPS = [
   {
     step: '01',
-    title: 'Book a Free Demo Class',
+    title: 'Submit Course Enquiry',
     description:
-      'Submit your enquiry or call us. Experience our teaching style, inspect our computer lab, and explore course modules firsthand.',
-    icon: CalendarCheck,
+      'Connect with us online, via WhatsApp, or call. Inquire about upcoming school board or college semester batch schedules and syllabus.',
+    icon: FileText,
   },
   {
     step: '02',
     title: 'Personalized Counselling',
     description:
-      'Our mentor evaluates your background and career goals to recommend the exact right course track without unnecessary modules.',
+      'Our mentor evaluates your background and syllabus goals to recommend the exact right course track matching your board or college semester.',
     icon: UserCheck,
   },
   {
     step: '03',
     title: 'Batch Allocation & Timing',
     description:
-      'Choose a timing that suits your schedule: Morning, Afternoon, Evening, or Weekend. Reserve your dedicated computer seat.',
+      'Choose a timing that suits your schedule: Morning, Afternoon, Evening, or Weekend. Reserve your dedicated computer workstation.',
     icon: Clock4,
   },
   {
     step: '04',
-    title: 'Hands-on Learning & Certification',
+    title: 'Hands-on Learning & Mastery',
     description:
-      'Complete practical lab exercises, build real projects, clear your doubts, and receive your verified course completion certificate.',
+      'Complete practical lab exercises, build real projects, clear your doubts with faculty, and achieve top board marks and university grades.',
     icon: GraduationCap,
   },
 ];
 
-export default function HowItWorks({ onOpenDemoModal }) {
+export default function HowItWorks({ onOpenEnquiryModal }) {
   return (
     <section id="how-it-works" className="py-20 md:py-28 bg-[#FAF3E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Simple 4-Step Pathway"
-          title="How It Works: From First Click to Certified Graduate"
-          subtitle="Our streamlined enrolment pathway gets you learning on practical systems with zero hassle."
+          title="How It Works: From Enquiry to High-Scoring Graduate"
+          subtitle="Our streamlined enrollment pathway gets you learning on practical systems with personal mentorship."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          {STEPS.map((step, idx) => {
+          {STEPS.map((step) => {
             const Icon = step.icon;
             return (
               <div
@@ -85,11 +85,11 @@ export default function HowItWorks({ onOpenDemoModal }) {
           <Button
             variant="primary"
             size="md"
-            onClick={() => onOpenDemoModal()}
+            onClick={() => onOpenEnquiryModal()}
             icon={ArrowRight}
             iconPosition="right"
           >
-            Start with Step 1: Book Demo
+            Start with Step 1: Enquire Now
           </Button>
         </div>
       </div>

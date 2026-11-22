@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, Phone, CheckCircle2, MessageSquare } from 'lucide-react';
+import { X, Send, Phone, CheckCircle2 } from 'lucide-react';
 import { siteConfig } from '../../config/site';
 import { trackEvent, AnalyticsEvents } from '../../utils/analytics';
 import Button from './Button';
@@ -76,19 +76,19 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
 
     // Build friendly WhatsApp message
     const waText = encodeURIComponent(
-      `Hi AIM Computer Academy, I would like to book a free demo class & enquiry:%0A%0A` +
+      `Hi AIM Computer Academy, I would like to enquire about admissions & course details:%0A%0A` +
         `👤 *Name:* ${formData.name.trim()}%0A` +
         `📱 *Phone:* ${formData.phone.trim()}%0A` +
         `📚 *Course/Batch:* ${formData.course}%0A` +
         `⏰ *Preferred Time:* ${formData.timing}%0A` +
-        (formData.message.trim() ? `💬 *Student Class/Board Details:* ${formData.message.trim()}%0A` : '') +
-        `%0APlease share upcoming batch timings and demo class schedule.`
+        (formData.message.trim() ? `💬 *Class / Board Details:* ${formData.message.trim()}%0A` : '') +
+        `%0APlease share upcoming batch timings, fees, and syllabus details.`
     );
 
     const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${waText}`;
 
     // Track analytics event
-    trackEvent(AnalyticsEvents.DEMO_FORM_SUBMIT, {
+    trackEvent(AnalyticsEvents.ENQUIRY_FORM_SUBMIT, {
       course: formData.course,
       timing: formData.timing,
     });
@@ -139,7 +139,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
             <h3 className="text-2xl font-black text-[#3B2418] mb-2">Enquiry Sent via WhatsApp!</h3>
             <p className="text-[#6B4E3D] text-sm md:text-base mb-6 leading-relaxed">
               Thank you, <strong>{formData.name}</strong>. We have opened WhatsApp with your details.
-              Our faculty coordinator will connect with you shortly to confirm your free demo class seat.
+              Our academic counsellor will connect with you shortly to assist with batch admission.
             </p>
             <div className="p-4 bg-[#F3E7D3] rounded-2xl mb-6 text-left text-xs text-[#6B4E3D] space-y-1 border border-[#E8D8C3]">
               <div><strong>Course / Batch:</strong> {formData.course}</div>
@@ -163,13 +163,13 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
           <div>
             <div className="mb-6">
               <span className="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#F3E7D3] text-[#5C3D2E] border border-[#E8D8C3] mb-2">
-                Free Demo Class & Counselling
+                Course Enquiry & Admissions
               </span>
               <h3 id="modal-title" className="text-2xl md:text-3xl font-black text-[#3B2418] tracking-tight">
-                Book Your Free Demo Seat
+                Admission & Batch Enquiry
               </h3>
               <p className="text-[#6B4E3D] text-sm mt-1.5">
-                Attend a hands-on session, inspect our computer lab workstations, and consult our faculty before taking admission.
+                Consult our faculty coordinator, check upcoming batch timings, and receive full curriculum and fee details.
               </p>
             </div>
 
@@ -275,7 +275,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                   icon={Send}
                   iconPosition="right"
                 >
-                  Confirm & Send via WhatsApp
+                  Submit Enquiry via WhatsApp
                 </Button>
                 <p className="text-center text-[11px] text-[#6B4E3D] mt-2">
                   🔒 We respect your privacy. No spam. You will be connected directly with our faculty coordinator.
