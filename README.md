@@ -13,7 +13,7 @@ A complete, production-quality, responsive landing page for **AIM COMPUTER ACADE
 
 All contact channels and institutional details are centralized in [`src/config/site.js`](src/config/site.js):
 - **Institute Name**: AIM COMPUTER ACADEMY
-- **Phone**: `+91 79809 61475` (`tel:+917980961475`)
+- **Phone**: `+91 93311 26294` (`tel:+919331126294`)
 - **Email**: `aimcomputeracademy2016@gmail.com` (`mailto:aimcomputeracademy2016@gmail.com`)
 - **Instagram**: [`@aimcomputer.in`](https://instagram.com/aimcomputer.in)
 - **WhatsApp**: `+91 79809 61475` with pre-filled enquiry text:
