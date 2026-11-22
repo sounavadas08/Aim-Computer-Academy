@@ -16,8 +16,8 @@ All contact channels and institutional details are centralized in [`src/config/s
 - **Phone**: `+91 93311 26294` (`tel:+919331126294`)
 - **Email**: `aimcomputeracademy2016@gmail.com` (`mailto:aimcomputeracademy2016@gmail.com`)
 - **Instagram**: [`@aimcomputer.in`](https://instagram.com/aimcomputer.in)
-- **WhatsApp**: `+91 79809 61475` with pre-filled enquiry text:
-  `https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses`
+- **WhatsApp**: `+91 93311 26294` with pre-filled enquiry text:
+  `https://wa.me/919331126294?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses`
 
 ---
 

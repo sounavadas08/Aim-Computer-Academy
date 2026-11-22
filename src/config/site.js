@@ -7,24 +7,24 @@
 export const siteConfig = {
   name: "AIM COMPUTER ACADEMY",
   tagline: "Empowering Careers Through Practical Computer Education",
-  
+
   // Official Contact Details (Exact as provided)
-  phone: "7980961475",
-  displayPhone: "+91 79809 61475",
-  phoneDialUrl: "tel:+917980961475",
-  
+  phone: "9331126294",
+  displayPhone: "+91 93311 26294",
+  phoneDialUrl: "tel:+919331126294",
+
   email: "aimcomputeracademy2016@gmail.com",
   emailMailtoUrl: "mailto:aimcomputeracademy2016@gmail.com",
-  
+
   instagram: {
     handle: "aimcomputer.in",
     url: "https://instagram.com/aimcomputer.in",
   },
-  
+
   whatsapp: {
-    number: "917980961475",
+    number: "919331126294",
     prefilledText: "Hi AIM Computer Academy, I want to know more about your courses",
-    url: "https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses",
+    url: "https://wa.me/919331126294?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses",
   },
 
   // Official Google Maps Integration
@@ -32,10 +32,10 @@ export const siteConfig = {
   googleMapsDirectionsUrl: "https://maps.google.com/?cid=13463131705886696751",
 
   // Isolated Placeholders (Strictly tagged until provided by user)
-  address: "[PLACEHOLDER: Institute Address, City, State, PIN]",
+  address: "24/A, Barrackpore - Barasat Rd, Jaffarpur more, Wireless Para, Anandapuri, Barrackpore, West Bengal 700122",
   city: "[PLACEHOLDER: City]",
-  workingHours: "[PLACEHOLDER: Mon-Sat: 9:00 AM - 7:00 PM | Sun: Closed]",
-  establishedYear: "[PLACEHOLDER: Established 2016]",
+  workingHours: "Mon-Sat: 9:00 AM - 7:00 PM | Sun: Closed",
+  establishedYear: "Established 2016",
 
   // Navigation Links
   navLinks: [

@@ -77,12 +77,12 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
     // Build friendly WhatsApp message
     const waText = encodeURIComponent(
       `Hi AIM Computer Academy, I would like to enquire about admissions & course details:%0A%0A` +
-        `👤 *Name:* ${formData.name.trim()}%0A` +
-        `📱 *Phone:* ${formData.phone.trim()}%0A` +
-        `📚 *Course/Batch:* ${formData.course}%0A` +
-        `⏰ *Preferred Time:* ${formData.timing}%0A` +
-        (formData.message.trim() ? `💬 *Class / Board Details:* ${formData.message.trim()}%0A` : '') +
-        `%0APlease share upcoming batch timings, fees, and syllabus details.`
+      `👤 *Name:* ${formData.name.trim()}%0A` +
+      `📱 *Phone:* ${formData.phone.trim()}%0A` +
+      `📚 *Course/Batch:* ${formData.course}%0A` +
+      `⏰ *Preferred Time:* ${formData.timing}%0A` +
+      (formData.message.trim() ? `💬 *Class / Board Details:* ${formData.message.trim()}%0A` : '') +
+      `%0APlease share upcoming batch timings, fees, and syllabus details.`
     );
 
     const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${waText}`;
@@ -185,9 +185,8 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                   placeholder="e.g. Sounava Das"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl bg-white border text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors ${
-                    errors.name ? 'border-[#9B2C2C]' : 'border-[#E8D8C3]'
-                  }`}
+                  className={`w-full px-4 py-3 rounded-xl bg-white border text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors ${errors.name ? 'border-[#9B2C2C]' : 'border-[#E8D8C3]'
+                    }`}
                 />
                 {errors.name && <p className="text-[11px] text-[#9B2C2C] mt-1 font-medium">{errors.name}</p>}
               </div>
@@ -205,12 +204,11 @@ export default function EnquiryModal({ isOpen, onClose, preselectedCourse = '' }
                     type="tel"
                     required
                     maxLength={10}
-                    placeholder="7980961475"
+                    placeholder="9331126294"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '') })}
-                    className={`w-full pl-12 pr-4 py-3 rounded-xl bg-white border text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors ${
-                      errors.phone ? 'border-[#9B2C2C]' : 'border-[#E8D8C3]'
-                    }`}
+                    className={`w-full pl-12 pr-4 py-3 rounded-xl bg-white border text-sm text-[#3B2418] placeholder-[#B07A4F]/60 focus:outline-none focus:ring-2 focus:ring-[#B07A4F] transition-colors ${errors.phone ? 'border-[#9B2C2C]' : 'border-[#E8D8C3]'
+                      }`}
                   />
                 </div>
                 {errors.phone && <p className="text-[11px] text-[#9B2C2C] mt-1 font-medium">{errors.phone}</p>}

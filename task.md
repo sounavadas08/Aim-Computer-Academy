@@ -144,20 +144,21 @@ File: `src/config/site.js`
 ```javascript
 export const siteConfig = {
   name: "AIM COMPUTER ACADEMY",
-  phone: "7980961475",
-  displayPhone: "+91 79809 61475",
+  phone: "9331126294",
+  displayPhone: "+91 93311 26294",
   email: "aimcomputeracademy2016@gmail.com",
   instagram: {
     handle: "aimcomputer.in",
     url: "https://instagram.com/aimcomputer.in",
   },
   whatsapp: {
-    number: "917980961475",
+    number: "919331126294",
     prefilledText: "Hi AIM Computer Academy, I want to know more about your courses",
-    url: "https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses",
+    url: "https://wa.me/919331126294?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses",
   },
   // Placeholders strictly isolated here
-  address: "[PLACEHOLDER: Institute Address, City, State, PIN]",
+  address: "AIM COMPUTER ACADEMY
+24/A, Barrackpore - Barasat Rd, Jaffarpur more, Wireless Para, Anandapuri, Barrackpore, West Bengal 700122",
   city: "[PLACEHOLDER: City]",
   workingHours: "[PLACEHOLDER: e.g. Mon-Sat: 9:00 AM - 7:00 PM]",
   establishedYear: "[PLACEHOLDER: Established Year]",
@@ -334,13 +335,13 @@ A task is only marked **Done** when all of the following conditions are verified
 ### PHASE 3: Conversion Features & Lead Generation
 
 - [x] **TASK-3.1**: Sticky floating WhatsApp button & universal WhatsApp integration
-  - *Description*: Implement sticky floating WhatsApp pill button and ensure every WhatsApp button across hero, contact, and CTA triggers exact URL: `https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses` with `rel="noopener noreferrer"`.
+  - *Description*: Implement sticky floating WhatsApp pill button and ensure every WhatsApp button across hero, contact, and CTA triggers exact URL: `https://wa.me/919331126294?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses` with `rel="noopener noreferrer"`.
   - *Files Affected*: `src/components/layout/FloatingContact.jsx`, `src/config/site.js`
   - *Acceptance Criteria*: Opens native app on mobile and WhatsApp Web on desktop; verified in new tab.
   - *Status*: Done
 
 - [x] **TASK-3.2**: Sticky Phone Call & Direct Email links
-  - *Description*: Mobile sticky Call button (`tel:+917980961475`) and direct mailto links (`mailto:aimcomputeracademy2016@gmail.com`).
+  - *Description*: Mobile sticky Call button (`tel:+919331126294`) and direct mailto links (`mailto:aimcomputeracademy2016@gmail.com`).
   - *Files Affected*: `src/components/layout/FloatingContact.jsx`
   - *Acceptance Criteria*: Call links trigger system dialer; email links launch default email client.
   - *Status*: Done

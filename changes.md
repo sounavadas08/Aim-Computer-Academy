@@ -179,7 +179,7 @@ This file maintains a strict chronological record of every change, addition, mod
   - `changes.md`
 - What changed:
   1. Authored complete project documentation in `README.md` including institute details, Cream & Brown design system guide, section architecture, conversion tracking, and setup/deployment commands.
-  2. Executed complete link and conversion test across all WhatsApp links (`https://wa.me/917980961475?text=...`), phone dialer (`tel:+917980961475`), email mailto (`aimcomputeracademy2016@gmail.com`), and Instagram profile (`https://instagram.com/aimcomputer.in`). All passed 100%.
+  2. Executed complete link and conversion test across all WhatsApp links (`https://wa.me/919331126294?text=...`), phone dialer (`tel:+919331126294`), email mailto (`aimcomputeracademy2016@gmail.com`), and Instagram profile (`https://instagram.com/aimcomputer.in`). All passed 100%.
   3. Validated form input edge cases (min 2 character name, 10-digit mobile number, invalid character sanitization).
   4. Conducted full compliance audit against `rules.md` (Rules 1-18 verified, zero violations).
   5. Verified production compilation via `npm run build` (built cleanly in 1.71s).

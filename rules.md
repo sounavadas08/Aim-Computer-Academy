@@ -21,10 +21,10 @@ Cream and brown only, defined via the central design tokens file (`src/styles/to
 ### 4. INSTITUTE DETAILS
 Use the institute name, phone number, email, WhatsApp number, and Instagram handle exactly as given, sourced exclusively from the central config file (`src/config/site.js`). Never alter or duplicate them. Never invent an address, city, working hours, established year, fee structures, courses, results, or testimonials. Use `[PLACEHOLDER]` tags for unprovided data.
 - Institute Name: `AIM COMPUTER ACADEMY`
-- Phone: `7980961475`
+- Phone: `9331126294`
 - Email: `aimcomputeracademy2016@gmail.com`
 - Instagram: `aimcomputer.in` (Link: `https://instagram.com/aimcomputer.in`)
-- WhatsApp: `917980961475` (Country code 91 + 7980961475)
+- WhatsApp: `919331126294` (Country code 91 + 9331126294)
 
 ### 5. REFERENCE VIDEO
 Follow the provided reference UI video for layout, section order, spacing scale, animation style, timing, and overall feel, but never copy brand assets, logos, or texts from it. If any aspect of the reference video is unclear, ask the user. Do not guess.
@@ -49,8 +49,8 @@ Do not build features or add sections that are not explicitly documented in `tas
 
 ### 12. CONTACT LINKS
 WhatsApp, Call, Email, and Instagram links must work exactly as specified in Phase 3 of `task.md`:
-- WhatsApp: `https://wa.me/917980961475?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses` with `target="_blank"` and `rel="noopener noreferrer"`
-- Call: `tel:+917980961475`
+- WhatsApp: `https://wa.me/919331126294?text=Hi%20AIM%20Computer%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses` with `target="_blank"` and `rel="noopener noreferrer"`
+- Call: `tel:+919331126294`
 - Email: `mailto:aimcomputeracademy2016@gmail.com`
 - Instagram: `https://instagram.com/aimcomputer.in` with `target="_blank"` and `rel="noopener noreferrer"`
 Test and verify that each link works on both mobile and desktop before marking its task as done.

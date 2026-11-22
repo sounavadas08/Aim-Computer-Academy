@@ -59,7 +59,7 @@ export default function ContactLocation({ onOpenEnquiryModal }) {
                       rel="noopener noreferrer"
                       className="text-sm font-bold text-[#3B2418] hover:text-[#25D366] transition-colors inline-flex items-center gap-1"
                     >
-                      <span>+91 79809 61475</span>
+                      <span>+91 93311 26294</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                     <p className="text-xs text-[#6B4E3D]">Fast responses for batch timings & fees</p>
