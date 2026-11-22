@@ -107,6 +107,24 @@ This file maintains a strict chronological record of every change, addition, mod
 
 ---
 
+### [2026-11-22 17:03] CHANGE-005
+- Task ID: TASK-6.5
+- Type: Config / Remote
+- Files affected:
+  - `.gitignore`
+  - All project repository files
+- What changed:
+  1. Updated `.gitignore` to properly exclude `node_modules`, `dist`, local environment files, and large raw video assets (`*.mp4`).
+  2. Staged all 95 clean project source files, static Roboto fonts, official logo, and governance documentation.
+  3. Created root commit `94a0aaf` on `main`.
+  4. Added remote `origin` pointing to `https://github.com/sounavadas08/Aim-Computer-Academy.git`.
+  5. Pushed `main` branch to GitHub remote with tracking (`origin/main`).
+- Why: User requested pushing the entire project to their GitHub repository.
+- Approved by user: Yes (user provided repository URL: `https://github.com/sounavadas08/Aim-Computer-Academy`).
+- Notes / follow-ups: Remote is synced and up to date.
+
+---
+
 ## Pending Approvals
 1. **Phase 4 & Phase 5 Execution**: Proceed to motion polish, accessibility checks, responsive verification, and SEO audit.
 
