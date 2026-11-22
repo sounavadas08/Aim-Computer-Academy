@@ -73,7 +73,7 @@ export default function Hero({ onOpenDemoModal }) {
   return (
     <section id="hero" className="relative pt-28 sm:pt-36 pb-20 md:pb-28 overflow-hidden bg-[#FAF3E8]">
       {/* Organic Wave Background Ribbon Divider (Inspired by Reference Video) */}
-      <div className="absolute top-0 left-0 right-0 h-44 sm:h-52 overflow-hidden pointer-events-none opacity-40">
+      <div className="absolute top-0 left-0 right-0 h-44 sm:h-56 overflow-hidden pointer-events-none opacity-40">
         <svg
           viewBox="0 0 1440 320"
           className="w-full h-full object-cover text-[#E8D8C3]"
@@ -84,11 +84,25 @@ export default function Hero({ onOpenDemoModal }) {
         </svg>
       </div>
 
+      {/* Subtle Floating Skill Badges (Decorative Polish) */}
+      <div className="hidden xl:block absolute top-40 left-12 animate-float pointer-events-none opacity-70">
+        <div className="px-3.5 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] shadow-sm flex items-center gap-1.5">
+          <Monitor className="w-3.5 h-3.5 text-[#B07A4F]" />
+          <span>Excel & MIS</span>
+        </div>
+      </div>
+      <div className="hidden xl:block absolute top-48 right-14 animate-float-alt pointer-events-none opacity-70">
+        <div className="px-3.5 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] shadow-sm flex items-center gap-1.5">
+          <Calculator className="w-3.5 h-3.5 text-[#B07A4F]" />
+          <span>Tally Prime + GST</span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Hero Header */}
         <div className="text-center max-w-4xl mx-auto mb-14">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] uppercase tracking-wider mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F3E7D3] border border-[#E8D8C3] text-xs font-bold text-[#5C3D2E] uppercase tracking-wider mb-6 shadow-sm animate-warm-pulse">
             <Sparkles className="w-3.5 h-3.5 text-[#B07A4F]" />
             <span>Admissions Open for New Practical Batches</span>
           </div>
@@ -114,7 +128,7 @@ export default function Hero({ onOpenDemoModal }) {
               onClick={() => onOpenDemoModal()}
               icon={ArrowRight}
               iconPosition="right"
-              className="w-full sm:w-auto shadow-xl hover:shadow-2xl"
+              className="w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all"
             >
               Book a Free Demo Class
             </Button>

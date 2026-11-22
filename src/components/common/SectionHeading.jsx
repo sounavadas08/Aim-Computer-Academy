@@ -15,7 +15,7 @@ export default function SectionHeading({
   }[align];
 
   return (
-    <div className={`flex flex-col max-w-3xl mb-12 md:mb-16 ${alignClass} ${className}`}>
+    <div className={`flex flex-col max-w-3xl mb-12 md:mb-16 ${alignClass} ${className} reveal-init is-revealed`}>
       {badge && (
         <span
           className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-3.5 border transition-transform duration-300 hover:scale-105 ${

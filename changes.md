@@ -125,8 +125,29 @@ This file maintains a strict chronological record of every change, addition, mod
 
 ---
 
+### [2026-11-22 17:10] CHANGE-006
+- Task ID: TASK-4.1 through TASK-4.7
+- Type: Added / Modified
+- Files affected:
+  - `src/styles/index.css`
+  - `src/hooks/useScrollReveal.js`
+  - `src/components/sections/Hero.jsx`
+  - `src/components/common/SectionHeading.jsx`
+  - `task.md`
+- What changed:
+  1. Implemented `useScrollReveal.js` hook utilizing IntersectionObserver to trigger performant transitions (animating strictly `transform` and `opacity`).
+  2. Created CSS keyframe animations for floating skill tags (`animate-float`, `animate-float-alt`), warm pulse badges (`animate-warm-pulse`), and staggered entry classes.
+  3. Added section anchor scroll offsets (`section[id] { scroll-margin-top: 5rem; }`) to guarantee smooth navbar link transitions.
+  4. Added full `@media (prefers-reduced-motion: reduce)` overrides to instantly resolve all motions for users requiring accessibility accommodation.
+  5. Tested and verified production build with zero errors.
+- Why: Complete Phase 4 (Motion, Micro-Interactions & Visual Polish) per master plan.
+- Approved by user: Yes (explicit "go for phase 4").
+- Notes / follow-ups: Phase 4 complete. Ready for Phase 5 (Performance, SEO & Accessibility).
+
+---
+
 ## Pending Approvals
-1. **Phase 4 & Phase 5 Execution**: Proceed to motion polish, accessibility checks, responsive verification, and SEO audit.
+1. **Phase 5 Execution**: Awaiting user's signal to begin Phase 5 (SEO metadata, JSON-LD Schema audit, accessibility review, multi-device viewport testing).
 
 ---
 

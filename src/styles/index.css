@@ -18,16 +18,75 @@ body {
   color: var(--color-brown-dark);
 }
 
-/* Reduced Motion Support (Rule 13) */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+/* Ensure navbar anchor links don't get covered by sticky header */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Scroll-triggered reveal animations (transform & opacity only) */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 120ms;
+}
+
+.reveal-delay-2 {
+  transition-delay: 240ms;
+}
+
+.reveal-delay-3 {
+  transition-delay: 360ms;
+}
+
+/* Floating micro-animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
   }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSlowAlt {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-alt {
+  animation: floatSlowAlt 6s ease-in-out infinite;
+}
+
+/* Shimmer pulse for badge */
+@keyframes warmPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-warm-pulse {
+  animation: warmPulse 3s ease-in-out infinite;
 }
 
 /* Custom Scrollbar */
@@ -44,4 +103,28 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-caramel-accent);
+}
+
+/* Reduced Motion Overrides (Rule 13) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .animate-float,
+  .animate-float-alt,
+  .animate-warm-pulse {
+    animation: none !important;
+  }
 }

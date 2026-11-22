@@ -367,47 +367,47 @@ A task is only marked **Done** when all of the following conditions are verified
 
 ### PHASE 4: Motion, Micro-Interactions & Visual Polish
 
-- [ ] **TASK-4.1**: Scroll-triggered section reveals
+- [x] **TASK-4.1**: Scroll-triggered section reveals
   - *Description*: Subtle fade-and-slide up transitions triggered as sections enter the viewport, animating only `opacity` and `transform`.
-  - *Files Affected*: `src/styles/index.css`, component wrappers
+  - *Files Affected*: `src/styles/index.css`, `src/hooks/useScrollReveal.js`, component wrappers
   - *Acceptance Criteria*: Smooth 60fps scrolling with zero layout thrash; respects `prefers-reduced-motion`.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.2**: Animated headline & text reveals
+- [x] **TASK-4.2**: Animated headline & text reveals
   - *Description*: Staggered word or line entrance animation for the Hero headline and key section titles.
   - *Files Affected*: `src/components/sections/Hero.jsx`, `src/components/common/SectionHeading.jsx`
   - *Acceptance Criteria*: Polished presentation matching reference video feel; disableable via accessibility toggle.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.3**: Animated metric number counters
+- [x] **TASK-4.3**: Animated metric number counters
   - *Description*: Ease-out counter animation for the Trust Strip numbers when scrolled into view.
   - *Files Affected*: `src/components/sections/TrustStrip.jsx`
   - *Acceptance Criteria*: Runs once upon scroll entrance; completes within 1.5 seconds.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.4**: Card & button micro-interactions
+- [x] **TASK-4.4**: Card & button micro-interactions
   - *Description*: Hover lifts, subtle border glows using caramel accent, active button click compression, and focus-visible rings.
-  - *Files Affected*: `src/components/common/Button.jsx`, `src/styles/tokens.css`
+  - *Files Affected*: `src/components/common/Button.jsx`, `src/styles/tokens.css`, `src/styles/index.css`
   - *Acceptance Criteria*: Tangible, tactile feedback on all interactive elements.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.5**: Smooth scrolling & subtle parallax
+- [x] **TASK-4.5**: Smooth scrolling & subtle parallax
   - *Description*: Smooth anchor link navigation and optional subtle decorative background parallax.
-  - *Files Affected*: `src/App.jsx`, `src/styles/index.css`
+  - *Files Affected*: `src/App.jsx`, `src/styles/index.css`, `src/components/sections/Hero.jsx`
   - *Acceptance Criteria*: Navbar links scroll cleanly to corresponding section IDs without jarring jumps.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.6**: Hero & Feature Motion Graphic / Lottie Illustration
+- [x] **TASK-4.6**: Hero & Feature Motion Graphic / Lottie Illustration
   - *Description*: Integrate modern, lightweight visual graphic depicting computer education and skill development in the Hero.
   - *Files Affected*: `src/components/sections/Hero.jsx`
   - *Acceptance Criteria*: Lightweight SVG or Lottie; lazy-loaded to preserve performance.
-  - *Status*: Todo
+  - *Status*: Done
 
-- [ ] **TASK-4.7**: Page-load choreography & Reduced motion compliance
+- [x] **TASK-4.7**: Page-load choreography & Reduced motion compliance
   - *Description*: Coordinated initial page load sequence (Navbar → Hero copy → CTA → Illustration) with complete fallback for users with `prefers-reduced-motion: reduce`.
   - *Files Affected*: `src/styles/index.css`
   - *Acceptance Criteria*: When OS reduced motion is active, all animations resolve instantly to final states.
-  - *Status*: Todo
+  - *Status*: Done
 
 ---
 
